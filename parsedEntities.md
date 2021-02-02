@@ -81,7 +81,7 @@ Example hashtags given sentence: `"This is my #sample #test!"`
   ]
 ```
 
-## Mention Entity
+## Mention
 
 A mention entity contain the following fields:
 
