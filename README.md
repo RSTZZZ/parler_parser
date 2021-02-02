@@ -1,6 +1,6 @@
 # Parler Parser
 
-The parler parser is used to parse parler HTML posts and user profiles.
+The parler parser is used to parse parler HTML posts and user profiles. Parler post dumps can be found from [here](https://ddosecrets.com/wiki/Parler).
 
 ## Parsed Entities:
 
@@ -10,7 +10,6 @@ Refer to [here](./parsedEntities.md)
 
 ```python
 import glob
-from tqdm import tqdm
 
 from parler.parser.postParser import PostParser
 from parler.dataType.post import Post
@@ -18,9 +17,7 @@ from parler.dataType.post import Post
 files = glob.glob('posts/*')
 
 data = []
-for idx, file in enumerate(tqdm(files)):
-  doc_data = {}
-
+for file in files:
   post = PostParser(file).parse()
   if (post is not None):
     data.append(post.convert())
