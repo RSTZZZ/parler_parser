@@ -25,9 +25,6 @@ class Post(BasePost):
     {  
        <basePost object converted to dict>
        ...
-       "comment_count" : int,
-       "echo_count" : int,
-       "upvote_count" : int,
        "post_type" : int => 
                      1 - "original" 
                      2 - "echo"
@@ -42,9 +39,6 @@ class Post(BasePost):
     ECHO_WITH_REPLY = 3
 
     def __init__(self, main_post: BasePost,
-                 comment_count: int = None,
-                 echo_count: int = None,
-                 upvote_count: int = None,
                  post_type: int = ORIGINAL,
                  echoed_status: BasePost = None):
 
@@ -54,19 +48,16 @@ class Post(BasePost):
                          main_post.view_count,
                          main_post.hashtags,
                          main_post.mentions,
-                         main_post.media)
+                         main_post.media,
+                         main_post.comment_count,
+                         main_post.echo_count,
+                         main_post.upvote_count)
 
-        self.comment_count = comment_count
-        self.echo_count = echo_count
-        self.upvote_count = upvote_count
         self.post_type = post_type
         self.echoed_status = echoed_status
 
     def convert(self):
         result = super().convert()
-        result["comment_count"] = self.comment_count
-        result["echo_count"] = self.echo_count
-        result["upvote_count"] = self.upvote_count
         result["post_type"] = self.post_type
         result["echoed_status"] = Util.convert(self.echoed_status)
         return result

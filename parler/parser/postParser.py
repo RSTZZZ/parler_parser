@@ -28,39 +28,51 @@ class PostParser():
         echo_byline = htmlParser.get_element_by_css(
             self.post_page, "div.echo-byline--wrapper")
 
+        echoed_post = htmlParser.get_element_by_css(
+            self.post_page, 'span.reblock.echo--parent'
+        )
+
         echo_reply_post = htmlParser.get_element_by_css(
             self.post_page, "span.reblock.show-under-echo")
 
-        main_post = htmlParser.get_element_by_css(
+        original_post = htmlParser.get_element_by_css(
             self.post_page, 'span.reblock.post'
         )
 
-        self.post_type = self.get_post_type(
-            echo_byline, echo_reply_post, main_post)
+        self.post_type = self.get_post_type(echo_byline, echo_reply_post)
 
+        # Early exit if we cannot determine the post type
         if (self.post_type == Post.UNKNOWN):
             return None
 
-        post = Post(self.get_main_post_info(main_post))
+        # Get the main post -> Original post | Echo reply Post
+        post = Post(self.get_main_post_info(echo_reply_post, original_post))
         post.post_type = self.post_type
 
-        # If the echo has no reply,our main post will not get a proper user.
+        # Fill out echoed post if it exists:
+        if (self.post_type != Post.ORIGINAL):
+            post.echoed_status = self.get_echoed_post_info(echoed_post)
+
         if (self.post_type == Post.ECHO_NO_REPLY):
+            #   1. Our main post will not get a proper user.
+            #   2. Our main post will not have a proper created_at time.
             post.user = self.get_user_from_echo_no_reply()
+            post.created_at = self.get_created_at_from_echo_no_reply()
 
-        # Only if our post has an echo, do we try to retrive.
-        if (self.post_type == Post.ECHO_WITH_REPLY):
-            post.echoed_status = self.get_echoed_post_info(echo_reply_post)
+            # The comment, echo and upvote found belongs to the echoed post
+            post.echoed_status.comment_count = self.get_comment_count()
+            post.echoed_status.echo_count = self.get_echo_count()
+            post.echoed_status.upvote_count = self.get_upvote_count()
         else:
-            post.echoed_status = None
 
-        post.comment_count = self.get_comment_count()
-        post.echo_count = self.get_echo_count()
-        post.upvote_count = self.get_upvote_count()
+            # The comment, echo and upvote found belongs to the main post
+            post.comment_count = self.get_comment_count()
+            post.echo_count = self.get_echo_count()
+            post.upvote_count = self.get_upvote_count()
 
         return post
 
-    def get_post_type(self, echo_byline, echo_reply_post, main_post):
+    def get_post_type(self, echo_byline, echo_reply_post):
 
         if echo_byline is None:
             return Post.ORIGINAL
@@ -70,14 +82,22 @@ class PostParser():
             else:
                 return Post.ECHO_WITH_REPLY
 
-    def get_main_post_info(self, main_post) -> BasePost:
-        return BasePostParser(main_post).parse()
+    def get_main_post_info(self, echo_reply_post, original_post) -> BasePost:
+        if (self.post_type == Post.ORIGINAL):
+            return BasePostParser(original_post).parse()
+        else:
+            return BasePostParser(echo_reply_post).parse()
 
-    def get_echoed_post_info(self, echoed_post) -> BasePost:
-        return BasePostParser(echoed_post).parse()
+    def get_echoed_post_info(self, echoed_post_info) -> BasePost:
+        return BasePostParser(echoed_post_info).parse()
 
     def get_user_from_echo_no_reply(self) -> User:
         return EchoNoReplyUserParser(self.post_page).parse()
+
+    def get_created_at_from_echo_no_reply(self):
+        timestamp = htmlParser.get_element_by_css(
+            self.post_page, 'div.eb--timestamp')
+        return htmlParser.get_text(timestamp, 'span', {})
 
     def get_comment_count(self):
         return htmlParser.get_text(self.post_page, 'span', {'class': 'pa--item--count'}, index=0)

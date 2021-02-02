@@ -20,6 +20,9 @@ class BasePost:
         "hashtags" : <hashtag object converted to dict>
         "mentions" : <media object converted to dict>
         "media" : <media object converted to dict>,
+        "comment_count" : 
+        "echo_count" : 
+        "upvote_count" :
     }
     '''
 
@@ -30,7 +33,11 @@ class BasePost:
                  view_count: int,
                  hashtags: Hashtags = None,
                  mentions: Mentions = None,
-                 media: Media = None):
+                 media: Media = None,
+                 comment_count: int = None,
+                 echo_count: int = None,
+                 upvote_count: int = None
+                 ):
         '''
         Initializer for the base post data type.
         '''
@@ -42,6 +49,9 @@ class BasePost:
         self.mentions = mentions
         self.media = media
         self.id = ""
+        self.comment_count = comment_count
+        self.echo_count = echo_count
+        self.upvote_count = upvote_count
 
     def convert(self):
         return Util.compress_dict({
@@ -53,4 +63,7 @@ class BasePost:
             "hashtags": Util.convert(self.hashtags),
             "mentions": Util.convert(self.mentions),
             "media": Util.convert(self.media),
+            "comment_count": self.comment_count,
+            "echo_count": self.echo_count,
+            "upvote_count": self.upvote_count,
         })
