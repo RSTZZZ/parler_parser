@@ -5,6 +5,7 @@ from parler.parser.mediaTypes.audioParser import AudioParser
 from parler.parser.mediaTypes.imageParser import ImageParser
 from parler.parser.mediaTypes.linkParser import LinkParser
 from parler.parser.mediaTypes.videoParser import VideoParser
+from parler.parser.mediaTypes.websiteParser import WebsiteParser
 
 
 class MediaParser:
@@ -21,7 +22,8 @@ class MediaParser:
             audio=self.get_audio(),
             image=self.get_image(),
             link=self.get_link(),
-            video=self.get_video()
+            video=self.get_video(),
+            website=self.get_website(),
         )
 
     def get_article(self):
@@ -38,3 +40,6 @@ class MediaParser:
 
     def get_video(self):
         return VideoParser(self.post).parse()
+
+    def get_website(self):
+        return WebsiteParser(self.post).parse()
