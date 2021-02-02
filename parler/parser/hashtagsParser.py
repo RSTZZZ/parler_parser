@@ -30,6 +30,7 @@ class HashtagsParser:
             end_index = match.end()
             start_index = end_index - len(text)
 
-            hashtags.add(Hashtag(text=text, indices=[start_index, end_index]))
+            hashtags.add(Hashtag(text=text[1:], indices=[
+                         start_index, end_index]))
 
         return hashtags
