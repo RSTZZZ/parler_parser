@@ -19,7 +19,7 @@ A post object contains the following fields:
 | `comment_count` | `int`                 | `true`   | # of comments made to this post                                                                         |
 | `echo_count`    | `int`                 | `true`   | # of echoes made to this post                                                                           |
 | `upvote_count`  | `int`                 | `true`   | # of upvotes made to this post                                                                          |
-| `post_type`     | `int`                 | `true`   | `1` - original post, `2` - post that echoes without a reply, `3` - post that echoes without a reply     |
+| `post_type`     | `int`                 | `true`   | `1` - original post, `2` - post that echoes without a reply, `3` - post that echoes with a reply        |
 | `echoed_status` | [`post`](#post)       | `true`   | The echoed `post`. Includes all the same fields except `post_type` and `echoed_status`                  |
 
 For examples, see [sample_output](./sample_output.json)
