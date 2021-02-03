@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#">
+<head>
+    <title>@Lbloom8656 - Lbloom8656 - </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Parleyed on Parler">
+    <link rel="stylesheet" href="/512ae92f/stylesheets/font.css">
+    <link rel="stylesheet" href="/512ae92f/stylesheets/style.css" />
+    <link rel="stylesheet" href="/512ae92f/stylesheets/prime.min.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:title" content="@Lbloom8656 - Lbloom8656 - " />
+    <meta property="og:description" content="Parleyed on Parler" />
+    <meta property="og:url" content="/post/00024d1c64d14f8baacf144ef0777022" />
+    <meta property="og:site_name" content="Parler" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="@Lbloom8656 - Lbloom8656 - " />
+    <meta name="twitter:description" content="Parleyed on Parler" />
+    <meta name="twitter:site" content="@parler_app" />
+
+    
+    <meta name="og:video" content="https://youtube.com/watch?v=ErDepuPamQs&amp;feature=share" />
+    
+
+    
+    
+    <meta property="og:image" content="https://company-media.parler.com/par-default-profile-picture.jpg" />
+    <meta name="twitter:image" content="https://company-media.parler.com/par-default-profile-picture.jpg" />
+    
+    <link rel="icon" type="image/x-icon" href="/512ae92f/images/parler/favicon.ico">
+
+    
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript">
+        let youtubeAPIInitialized = false;
+        if (window['YT']) {
+            youtubeAPIInitialized = true;
+        } else {
+            window['onYouTubeIframeAPIReady'] = () => {
+                youtubeAPIInitialized = true;
+            };
+        }
+    </script>
+    
+
+</head>
+<body>
+
+<div id="main-toolbar--wrapper" class="w--100">
+    
+    
+    <div onclick="sidenavClose()" id="sidenav--overlay-blocker"></div>
+
+    <div id="main-sidenav--container">
+        <div id="ms--header" class="p--flex pf--jsb pf--ac pf--row w--100 gutter--15">
+            <div id="ms--header--branding">
+                <img src="/512ae92f/images/branding/mark.svg" alt="Parler Mark">
+            </div>
+
+            <div id="ms--header--actions">
+                <div onclick="sidenavClose()" id="ms--header--close--wrapper">
+                    <img src="/512ae92f/images/icons/close.svg" alt="Close Side Navigation">
+                </div>
+            </div>
+        </div>
+
+        <div id="ms--body">
+            <div id="ms--menu--wrapper">
+                <div id="ms--menu" class="p--flex pf--col">
+                    <a href="https://parler.com/auth/access" class="ms--menu-item"> Login/Register </a>
+                    <a href="/" class="ms--menu-item"> Home </a>
+                    <a href="/discover" class="ms--menu-item"> Discover </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="ms--footer" class="p--flex pf--col pf--ac pf--jsa">
+            <span class="version-text">Version 1.1.2</span>
+        </div>
+    </div>
+
+    <div id="main-toolbar">
+        <div id="mt--content" class="gutter--30 p--flex pf--jsb pf--ac pf--row container--main">
+            <div class="p--flex pf--row pf--jsb pf--ac">
+                <div onclick="sidenavOpen()" id="main-nav-trigger--wrapper" title="Main Menu" aria-label="Main Menu">
+                    <div id="main-nav-trigger">
+                        <span class="main-nav-trigger--line"></span>
+                        <span class="main-nav-trigger--line"></span>
+                        <span class="main-nav-trigger--line"></span>
+                    </div>
+                </div>
+
+                <div id="branding">
+                    <img src="/512ae92f/images/branding/logo.svg" alt="Parler Logo">
+                </div>
+            </div>
+
+            <div class="p--flex pf--row pf--jsb pf--ac">
+                <div id="main-nav">
+                    <img src="/512ae92f/images/icons/home.svg" alt="Home">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<main id="site--wrapper" class="container--main">
+    <div class="column--single p--flex pf--col pf--jsa pf--ac">
+        <div class="post--card--wrapper">
+        
+    
+    
+    <div class="card card--post-container w--100">
+        
+        
+        <span class="reblock parent-and-post--wrapper">
+            
+            
+            
+        </span>
+        
+        
+        <span class="reblock post">
+            <div class="card--header p--flex pf--row">
+        <div class="ch--col ch--avatar-col">
+            <div class="ch--avatar--wrapper">
+                <img src="https://company-media.parler.com/par-default-profile-picture.jpg" alt="Post Author Profile Pic">
+            </div>
+            
+        </div>
+
+        <div class="ch--col ch--meta-col p--flex pf--col pf--jc">
+            
+            <a href="/profile/Lbloom8656/posts" class="card-meta--row">
+            
+                <span class="author--name">Lbloom8656</span>
+                <span class="separator">·</span>
+                <span class="author--username">@Lbloom8656</span>
+            
+            </a>
+            
+            <span class="card-meta--row">
+              <span class="post--timestamp">5 days ago</span>
+              <span class="separator">·</span>
+              <span class="impressions--wrapper">
+                <div class="impressions--icon--wrapper">
+                  <img src="/512ae92f/images/icons/impressions.svg" alt="Impressions">
+                </div>
+                <span class="impressions--count">20</span>
+              </span>
+            </span>
+        </div>
+
+        <div class="ch--col ch--menu-col">
+            <div class="ch--more-actions--wrapper"></div>
+        </div>
+    </div>
+
+    <div class="card--body">
+        <p></p>
+        
+            
+    
+    <div class="media-container--wrapper w--100">
+        
+        
+            
+                
+                
+                
+                
+                
+                    <div class="mc-iframe-embed--container w--100 p--flex pf--col pf--ac">
+        <div class="mc-iframe-embed--wrapper">
+            <iframe type="text/html" src="https://www.youtube.com/embed/ErDepuPamQs" allowfullscreen frameborder="0"></iframe>
+        </div>
+        <div class="mc-iframe-embed--meta--wrapper w--100 p--flex pf--col pf--jsa">
+            <span class="mc-iframe-embed--title reblock">BREAKING! Pennsylvania Senate DEMANDS DELAY of Electoral College CERTIFICATION!!!</span>
+            <span class="mc-iframe-embed--excerpt reblock">✅YOU ARE INVITED to our TURLEY TALKERS NEW YEARS VIRTUAL CONFERENCE! Register for Saturday, January 9th, 2021 today and get our SPECIAL NEW YEARS DISCOUNT:...</span>
+            <span class="mc-iframe-embed--link">
+              <a href="https://www.youtube.com/embed/ErDepuPamQs" class="p--flex pf--row pf--ac">
+                <span class="mc-iframe-embed--link--icon">
+                  <img src="/512ae92f/images/icons/link.svg" alt="">
+                </span>
+                https://youtube.com/watch?v=ErDepuPamQs&amp;feature=share
+              </a>
+            </span>
+        </div>
+    </div>
+
+                
+                
+                
+            
+        
+        
+    </div>
+    
+
+        
+    </div>
+
+        </span>
+        
+        <div class="card--footer">
+            
+            <span class="reblock">
+                <div class="post--actions p--flex pf--ac pf--jsb">
+        <div class="post--actions--row pa--main-row p--flex pf--ac pf--jsb">
+            <div class="pa--item--wrapper">
+                <img src="/512ae92f/images/icons/comment.svg" alt="Post Comments">
+                <span class="pa--item--count">0</span>
+            </div>
+            <div class="pa--item--wrapper">
+                <img src="/512ae92f/images/icons/echo.svg" alt="Post Echoes">
+                <span class="pa--item--count">0</span>
+            </div>
+            <div class="pa--item--wrapper">
+                <img src="/512ae92f/images/icons/upvote.svg" alt="Post Upvotes">
+                <span class="pa--item--count">0</span>
+            </div>
+        </div>
+    </div>
+
+            </span>
+            
+            
+            
+        </div>
+    </div>
+
+        
+    </div>
+
+        <div class="login-more">
+            <div class="button--wrapper">
+                <a href="https://parler.com/auth/access">
+                    <button class="gradient-btn bold">See More At Parler</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="footer--container">
+    <footer id="main-footer--container">
+        <div id="main-footer" class="w--100 gutter--15 container--main">
+            <div id="mf--nav--wrapper" class="p--flex pf--row pf--jsb pf--ac">
+                <div id="mf--nav">
+                    <a href="https://legal.parler.com/documents/privacypolicy.pdf" target="_blank" class="mf--fn--item"> About </a>
+                    <a href="https://faq.parler.com" target="_blank" class="mf--fn--item"> Help </a>
+                    <a href="https://legal.parler.com/documents/privacypolicy.pdf" target="_blank" class="mf--fn--item"> Privacy </a>
+                    <a href="https://legal.parler.com/documents/guidelines.pdf" target="_blank" class="mf--fn--item"> Community Guidelines </a>
+                    <a href="https://legal.parler.com/documents/useragreement.pdf" target="_blank" class="mf--fn--item"> Terms of Service </a>
+                </div>
+                <span id="copyright">© 2020 Parler</span>
+            </div>
+        </div>
+        <script src="/512ae92f/javascript/gen.js"></script>
+        <script src="/512ae92f/javascript/slider.js"></script>
+        <script src="/512ae92f/javascript/modals.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    </footer>
+
+</div>
+
+</body>
+
+</html>

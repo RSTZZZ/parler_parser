@@ -4,55 +4,6 @@
     "id": "",
     "text": null,
     "user": {
-      "user_id": "b7f0a482553a2cc8102d34703f190f25",
-      "photo": "https://images.parler.com/fcf0b8932bd540e4a6a7a2a8ff9523e3_256",
-      "badge": null,
-      "name": "Ppapin83",
-      "username": "@Ppapin83",
-      "description": null,
-      "description_hashtags": null
-    },
-    "view_count": null,
-    "hashtags": [],
-    "mentions": [],
-    "media": null,
-    "comment_count": null,
-    "echo_count": null,
-    "upvote_count": null,
-    "post_type": 2,
-    "echoed_status": {
-      "created_at": "4 days ago",
-      "id": "",
-      "text": "Washington D.C.",
-      "user": {
-        "user_id": "5ee4d12b1a6f3a1de22b2a9effca414f",
-        "photo": "https://images.parler.com/fcf0b8932bd540e4a6a7a2a8ff9523e3_256",
-        "badge": "Influencer",
-        "name": "Tommy Robinson",
-        "username": "@TommyRobinson",
-        "description": null,
-        "description_hashtags": null
-      },
-      "view_count": "390679",
-      "hashtags": [],
-      "mentions": [],
-      "media": {
-        "article": null,
-        "audio": null,
-        "image": "https://api.parler.com/l/tLNto",
-        "link": null,
-        "video": null
-      },
-      "comment_count": "418",
-      "echo_count": "2130",
-      "upvote_count": "4815"
-    }
-  },
-  {
-    "created_at": "4 days ago",
-    "id": "",
-    "text": null,
-    "user": {
       "user_id": "0aa3b9f9d557b78ff671b4604f88378b",
       "photo": "https://images.parler.com/cdd1853c6c6342828b46ad22390120e5_256",
       "badge": null,
@@ -64,11 +15,12 @@
     "view_count": null,
     "hashtags": [],
     "mentions": [],
-    "media": null,
+    "media": [],
     "comment_count": null,
     "echo_count": null,
     "upvote_count": null,
-    "post_type": 2,
+    "post_type_id": 2,
+    "post_type": "echo with no reply",
     "echoed_status": {
       "created_at": "4 days ago",
       "id": "",
@@ -85,21 +37,72 @@
       "view_count": "3226951",
       "hashtags": [],
       "mentions": [],
-      "media": {
-        "article": {
-          "title": "At The Highest Levels – Part 1 of 3",
-          "excerpt": "This  is the kind of series I’d hope I’d never have to write. And yet, here we are. After three years of doing my best to serve the groundswell that is the Patriot movement in the United…",
-          "src": "https://api.parler.com/l/S4Syt",
-          "image": null
-        },
-        "audio": null,
-        "image": null,
-        "link": null,
-        "video": null
-      },
+      "media": [
+        {
+          "image_src": "At The Highest Levels – Part 1 of 3",
+          "title": "This is the kind of series I’d hope I’d never have to write. And yet, here we are. After three years of doing my best to serve the groundswell that is the Patriot movement in the United…",
+          "excerpt": "This is the kind of series I’d hope I’d never have to write. And yet, here we are. After three years of doing my best to serve the groundswell that is the Patriot movement in the United…",
+          "link_src": "https://www.neonrevolt.com/2021/01/06/at-the-highest-levels-part-1-of-3/",
+          "medium_type_id": 1,
+          "medium_type": "article"
+        }
+      ],
       "comment_count": "1067",
       "echo_count": "7329",
       "upvote_count": "16871"
+    }
+  },
+  {
+    "created_at": "4 days ago",
+    "id": "",
+    "text": "Nothing can or will happen we are now communist controlled",
+    "user": {
+      "user_id": "0b691ff8e87387517644706ea2decda3",
+      "photo": "https://company-media.parler.com/par-default-profile-picture.jpg",
+      "badge": null,
+      "name": "Vince Talley",
+      "username": "@Vincenz21",
+      "description": null,
+      "description_hashtags": null
+    },
+    "view_count": "12",
+    "hashtags": [],
+    "mentions": [],
+    "media": [],
+    "comment_count": "134",
+    "echo_count": "73",
+    "upvote_count": "426",
+    "post_type_id": 3,
+    "post_type": "echo with reply",
+    "echoed_status": {
+      "created_at": "4 days ago",
+      "id": "",
+      "text": "A preview of what to expect as Republicans object to electoral votes today. A review of my Breitbart News coverage:",
+      "user": {
+        "user_id": "41085ff25f589b517aebd5e5266f2a16",
+        "photo": "https://images.parler.com/0b4938bfc912430d9995017a26615e76_256",
+        "badge": "Influencer",
+        "name": "Kyle Olson 🇺🇸",
+        "username": "@KyleOlson4",
+        "description": null,
+        "description_hashtags": null
+      },
+      "view_count": "312042",
+      "hashtags": [],
+      "mentions": [],
+      "media": [
+        {
+          "image_src": "",
+          "title": "",
+          "excerpt": "",
+          "link_src": "https://pdcn.co/e/https://chtbl.com/track/5DB9CD/www.buzzsprout.com/1214651/7160134-one-quick-story-ep-5-i-explain-my-breitbart-news-coverage-of-the-objections-to-electors-and-what-to-expect-on-january-6.mp3?blob_id=30922009&download=true",
+          "medium_type_id": 2,
+          "medium_type": "audio"
+        }
+      ],
+      "comment_count": null,
+      "echo_count": null,
+      "upvote_count": null
     }
   },
   {
@@ -118,11 +121,12 @@
     "view_count": "315",
     "hashtags": [],
     "mentions": [],
-    "media": null,
+    "media": [],
     "comment_count": "5589",
     "echo_count": "7356",
     "upvote_count": "26306",
-    "post_type": 3,
+    "post_type_id": 3,
+    "post_type": "echo with reply",
     "echoed_status": {
       "created_at": "4 days ago",
       "id": "",
@@ -139,7 +143,154 @@
       "view_count": "1932209",
       "hashtags": [],
       "mentions": [],
-      "media": null,
+      "media": [],
+      "comment_count": null,
+      "echo_count": null,
+      "upvote_count": null
+    }
+  },
+  {
+    "created_at": "5 days ago",
+    "id": "",
+    "text": "",
+    "user": {
+      "user_id": "d6cfff97d5867f89a9e478606b11e4ff",
+      "photo": "https://company-media.parler.com/par-default-profile-picture.jpg",
+      "badge": null,
+      "name": "Lbloom8656",
+      "username": "@Lbloom8656",
+      "description": null,
+      "description_hashtags": null
+    },
+    "view_count": "20",
+    "hashtags": [],
+    "mentions": [],
+    "media": [
+      {
+        "image_src": "BREAKING! Pennsylvania Senate DEMANDS DELAY of Electoral College CERTIFICATION!!!",
+        "title": "✅YOU ARE INVITED to our TURLEY TALKERS NEW YEARS VIRTUAL CONFERENCE! Register for Saturday, January 9th, 2021 today and get our SPECIAL NEW YEARS DISCOUNT:...",
+        "excerpt": "✅YOU ARE INVITED to our TURLEY TALKERS NEW YEARS VIRTUAL CONFERENCE! Register for Saturday, January 9th, 2021 today and get our SPECIAL NEW YEARS DISCOUNT:...",
+        "link_src": "https://youtube.com/watch?v=ErDepuPamQs&feature=share",
+        "medium_type_id": 3,
+        "medium_type": "iframe-embed"
+      }
+    ],
+    "comment_count": "0",
+    "echo_count": "0",
+    "upvote_count": "0",
+    "post_type_id": 1,
+    "post_type": "original",
+    "echoed_status": null
+  },
+  {
+    "created_at": "4 days ago",
+    "id": "",
+    "text": null,
+    "user": {
+      "user_id": "b7f0a482553a2cc8102d34703f190f25",
+      "photo": "https://images.parler.com/fcf0b8932bd540e4a6a7a2a8ff9523e3_256",
+      "badge": null,
+      "name": "Ppapin83",
+      "username": "@Ppapin83",
+      "description": null,
+      "description_hashtags": null
+    },
+    "view_count": null,
+    "hashtags": [],
+    "mentions": [],
+    "media": [],
+    "comment_count": null,
+    "echo_count": null,
+    "upvote_count": null,
+    "post_type_id": 2,
+    "post_type": "echo with no reply",
+    "echoed_status": {
+      "created_at": "4 days ago",
+      "id": "",
+      "text": "Washington D.C.",
+      "user": {
+        "user_id": "5ee4d12b1a6f3a1de22b2a9effca414f",
+        "photo": "https://images.parler.com/fcf0b8932bd540e4a6a7a2a8ff9523e3_256",
+        "badge": "Influencer",
+        "name": "Tommy Robinson",
+        "username": "@TommyRobinson",
+        "description": null,
+        "description_hashtags": null
+      },
+      "view_count": "390679",
+      "hashtags": [],
+      "mentions": [],
+      "media": [
+        {
+          "image_src": null,
+          "title": null,
+          "excerpt": null,
+          "link_src": null,
+          "medium_type_id": 4,
+          "medium_type": "image"
+        }
+      ],
+      "comment_count": "418",
+      "echo_count": "2130",
+      "upvote_count": "4815"
+    }
+  },
+  {
+    "created_at": "4 days ago",
+    "id": "",
+    "text": "You will regret not listening to this recording",
+    "user": {
+      "user_id": "0c92515799e873c0c03daf19571d6f3e",
+      "photo": "https://company-media.parler.com/par-default-profile-picture.jpg",
+      "badge": null,
+      "name": "Rori C Corbin",
+      "username": "@NYPatriot159",
+      "description": null,
+      "description_hashtags": null
+    },
+    "view_count": "19",
+    "hashtags": [],
+    "mentions": [],
+    "media": [],
+    "comment_count": "15",
+    "echo_count": "63",
+    "upvote_count": "103",
+    "post_type_id": 3,
+    "post_type": "echo with reply",
+    "echoed_status": {
+      "created_at": "4 days ago",
+      "id": "",
+      "text": "BLOCKBUSTER‼️The 'MOAB' — Mother Of All Bombshells — Breaks Open Entire 2020 National Election Fraud SchemeProof of a calculating and intentional plot to take down America by stealing the election. This proof provides the mechanism for each state to recall their slate of electors immediately or face lawsuits and request all federal government agencies to lock down all internal communications, equipment, and documentation from the U.S. Embassy in Rome, Italy. “Make no mistake, this is a coup d’etat that we will stop in the name of justice and free and fair elections,” stated Maria Strollo Zack, Chairman of Nations in Action.- - -SHINE THE LIGHT OF TRUTH, THE BEST DISINFECTANT ... EXPOSE INSIDIOUS EVIL‼️WAKE UP AMERICA‼️ TRANSPARENCY ... ACCOUNTABILITY‼️@realdonaldtrump@stopthesteal @rudyg@jennaellisesq@sidneypowell@linwood @genflynn @krakenwood",
+      "user": {
+        "user_id": "5b25d17347ad6e4621429ca5bc82923c",
+        "photo": "https://images.parler.com/c2ab6291c29b4afe1c40d61384ff2442_256",
+        "badge": "Citizen",
+        "name": "Jack Cummins ✝️ 🇺🇸 🦅 🗽 ⚖️",
+        "username": "@jbctwo11",
+        "description": null,
+        "description_hashtags": null
+      },
+      "view_count": "11037",
+      "hashtags": [],
+      "mentions": [],
+      "media": [
+        {
+          "image_src": "Global defense contractor IT expert testifies in Italian court he and others switched votes in the U.S. presidential race",
+          "title": "Rome, Italy (January 5, 2021) – An employee of the 8th largest global defense contractor, Leonardo SpA, provided a shocking",
+          "excerpt": "Rome, Italy (January 5, 2021) – An employee of the 8th largest global defense contractor, Leonardo SpA, provided a shocking",
+          "link_src": "https://noqreport.com/2021/01/06/global-defense-contractor-it-expert-testifies-in-italian-court-he-and-others-switched-votes-in-the-u-s-presidential-race/",
+          "medium_type_id": 1,
+          "medium_type": "article"
+        },
+        {
+          "image_src": "Vocaroo | Online voice recorder",
+          "title": "Vocaroo is a quick and easy way to share voice messages over the interwebs.",
+          "excerpt": "Vocaroo is a quick and easy way to share voice messages over the interwebs.",
+          "link_src": "https://vocaroo.com/1e976QE4oDoy",
+          "medium_type_id": 7,
+          "medium_type": "website"
+        }
+      ],
       "comment_count": null,
       "echo_count": null,
       "upvote_count": null
@@ -161,20 +312,74 @@
     "view_count": "17",
     "hashtags": [],
     "mentions": [],
-    "media": {
-      "article": null,
-      "audio": null,
-      "image": null,
-      "link": {
-        "src": "https://twitter.com/realdonaldtrump/status/1346588064026685443?s=12",
-        "image": "/512ae92f/images/icons/link.svg"
-      },
-      "video": null
-    },
+    "media": [
+      {
+        "image_src": null,
+        "title": null,
+        "excerpt": null,
+        "link_src": "https://twitter.com/realdonaldtrump/status/1346588064026685443?s=12",
+        "medium_type_id": 5,
+        "medium_type": "basic"
+      }
+    ],
     "comment_count": "0",
     "echo_count": "1",
     "upvote_count": "1",
-    "post_type": 1,
+    "post_type_id": 1,
+    "post_type": "original",
     "echoed_status": null
+  },
+  {
+    "created_at": "4 days ago",
+    "id": "",
+    "text": "Scum of the earth.",
+    "user": {
+      "user_id": "f8926ce631684afdb95459bc5b11b77c",
+      "photo": "https://images.parler.com/aacdb568e83c40988ac0a1a139d68fbd_256",
+      "badge": null,
+      "name": "Fastwillys76",
+      "username": "@Fastwillys76",
+      "description": null,
+      "description_hashtags": null
+    },
+    "view_count": "114",
+    "hashtags": [],
+    "mentions": [],
+    "media": [],
+    "comment_count": "532",
+    "echo_count": "2933",
+    "upvote_count": "3562",
+    "post_type_id": 3,
+    "post_type": "echo with reply",
+    "echoed_status": {
+      "created_at": "4 days ago",
+      "id": "",
+      "text": "EXPLOSIVE: OBAMA AND RENZI FORMER PM OF ITALY ORCHSTRATED THE THEFT OF U.S. ELECTIONSHT @blueskyreport",
+      "user": {
+        "user_id": "5c38daf32d70711ce67f29cc6f13bff1",
+        "photo": "https://images.parler.com/a821df947bfc4b6c89a451c24cae246a_256",
+        "badge": null,
+        "name": "CJ",
+        "username": "@cjtruth",
+        "description": null,
+        "description_hashtags": null
+      },
+      "view_count": "307881",
+      "hashtags": [],
+      "mentions": [],
+      "media": [
+        {
+          "image_src": "EXPLOSIVE: OBAMA AND RENZI FORMER PM OF ITALY ORCHESTRATED THE THEFT OF U.S. ELECTIONS",
+          "title": "Explosive: Obama and Renzi, former PM of Italy orchestrated the theft of the U.S. election from President Trump. Stephan Serafini coordinated with General Claudio Graziano, a board member of Leonardo.",
+          "excerpt": "Explosive: Obama and Renzi, former PM of Italy orchestrated the theft of the U.S. election from President Trump. Stephan Serafini coordinated with General Claudio Graziano, a board member of Leonardo.",
+          "link_src": "https://rumble.com/vch2gw-explosive-obama-and-renzi-former-pm-of-italy-orchstrated-the-theft-of-u.s.-.html",
+          "medium_type_id": 7,
+          "medium_type": "website"
+        }
+      ],
+      "comment_count": null,
+      "echo_count": null,
+      "upvote_count": null
+    }
   }
 ]

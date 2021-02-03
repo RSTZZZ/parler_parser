@@ -25,7 +25,8 @@ class Post(BasePost):
     {  
        <basePost object converted to dict>
        ...
-       "post_type" : int => 
+       "post_type_id" : int => [1 - 3]
+       "post_type" : str => 
                      1 - "original" 
                      2 - "echo"
                      3 - "echo with reply"
@@ -38,8 +39,15 @@ class Post(BasePost):
     ECHO_NO_REPLY = 2
     ECHO_WITH_REPLY = 3
 
+    POST_TYPE_MAP = {
+        UNKNOWN: "unknown",
+        ORIGINAL: "original",
+        ECHO_NO_REPLY: "echo with no reply",
+        ECHO_WITH_REPLY: "echo with reply"
+    }
+
     def __init__(self, main_post: BasePost,
-                 post_type: int = ORIGINAL,
+                 post_type_id: int = UNKNOWN,
                  echoed_status: BasePost = None):
 
         super().__init__(main_post.created_at,
@@ -53,11 +61,12 @@ class Post(BasePost):
                          main_post.echo_count,
                          main_post.upvote_count)
 
-        self.post_type = post_type
+        self.post_type_id = post_type_id
         self.echoed_status = echoed_status
 
     def convert(self):
         result = super().convert()
-        result["post_type"] = self.post_type
+        result["post_type_id"] = self.post_type_id
+        result["post_type"] = self.POST_TYPE_MAP[self.post_type_id]
         result["echoed_status"] = Util.convert(self.echoed_status)
         return result

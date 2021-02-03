@@ -1,45 +1,65 @@
-from parler.dataType.media import Media
+import re
 
-from parler.parser.mediaTypes.articleParser import ArticleParser
-from parler.parser.mediaTypes.audioParser import AudioParser
-from parler.parser.mediaTypes.imageParser import ImageParser
-from parler.parser.mediaTypes.linkParser import LinkParser
-from parler.parser.mediaTypes.videoParser import VideoParser
-from parler.parser.mediaTypes.websiteParser import WebsiteParser
+from parler.dataType.media import Media
+from parler.dataType.medium import Medium
+
+import parler.parser.htmlParser as htmlParser
 
 
 class MediaParser:
     '''
-    Parse the media container inside a post
+    Parse the post for all mediums / media
     '''
 
     def __init__(self, post):
         self.post = post
 
     def parse(self):
-        return Media(
-            article=self.get_article(),
-            audio=self.get_audio(),
-            image=self.get_image(),
-            link=self.get_link(),
-            video=self.get_video(),
-            website=self.get_website(),
-        )
+        '''
+        Helper function to find all medium inside the post
+        '''
 
-    def get_article(self):
-        return ArticleParser(self.post).parse()
+        medium_list = htmlParser.get_all_elements(
+            self.post, 'div', re.compile('mc-.*--container'))
 
-    def get_audio(self):
-        return AudioParser(self.post).parse()
+        media = Media()
 
-    def get_image(self):
-        return ImageParser(self.post).parse()
+        if (medium_list is None):
+            return media
 
-    def get_link(self):
-        return LinkParser(self.post).parse()
+        for medium in medium_list:
+            media.add(self.parse_medium(medium))
 
-    def get_video(self):
-        return VideoParser(self.post).parse()
+        return media
 
-    def get_website(self):
-        return WebsiteParser(self.post).parse()
+    def parse_medium(self, medium):
+        '''
+        Helper function to parse a medium
+        '''
+
+        medium_class_type = medium.get('class', '')[0]
+        medium_type = medium_class_type[3: medium_class_type.index("--")]
+
+        if (medium_type == "image"):
+            return Medium(
+                image_src=htmlParser.get_image_src(
+                    medium, {'class': "mc-image--wrapper"}, html_tag="div"),
+                medium_type=medium_type
+            )
+
+        image_src = htmlParser.get_image_src(
+            medium, {'class': f"mc-{medium_type}--image"}, html_tag="div")
+
+        title = htmlParser.get_text(
+            medium, 'span', {'class': f"mc-{medium_type}--title"})
+
+        excerpt = htmlParser.get_text(
+            medium, 'span', {'class': f"mc-{medium_type}--excerpt"})
+
+        link_element = htmlParser.get_element_by_css(
+            medium, f'span.mc-{medium_type}--link')
+
+        link_src = None if link_element is None else htmlParser.get_text(
+            link_element, 'a', {}).strip()
+
+        return Medium(image_src=image_src, title=title, excerpt=excerpt, link_src=link_src, medium_type=medium_type)

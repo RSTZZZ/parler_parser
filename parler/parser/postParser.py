@@ -39,21 +39,21 @@ class PostParser():
             self.post_page, 'span.reblock.post'
         )
 
-        self.post_type = self.get_post_type(echo_byline, echo_reply_post)
+        self.post_type_id = self.get_post_type_id(echo_byline, echo_reply_post)
 
         # Early exit if we cannot determine the post type
-        if (self.post_type == Post.UNKNOWN):
+        if (self.post_type_id == Post.UNKNOWN):
             return None
 
         # Get the main post -> Original post | Echo reply Post
         post = Post(self.get_main_post_info(echo_reply_post, original_post))
-        post.post_type = self.post_type
+        post.post_type_id = self.post_type_id
 
         # Fill out echoed post if it exists:
-        if (self.post_type != Post.ORIGINAL):
+        if (self.post_type_id != Post.ORIGINAL):
             post.echoed_status = self.get_echoed_post_info(echoed_post)
 
-        if (self.post_type == Post.ECHO_NO_REPLY):
+        if (self.post_type_id == Post.ECHO_NO_REPLY):
             #   1. Our main post will not get a proper user.
             #   2. Our main post will not have a proper created_at time.
             post.user = self.get_user_from_echo_no_reply()
@@ -72,7 +72,7 @@ class PostParser():
 
         return post
 
-    def get_post_type(self, echo_byline, echo_reply_post):
+    def get_post_type_id(self, echo_byline, echo_reply_post):
 
         if echo_byline is None:
             return Post.ORIGINAL
@@ -83,7 +83,7 @@ class PostParser():
                 return Post.ECHO_WITH_REPLY
 
     def get_main_post_info(self, echo_reply_post, original_post) -> BasePost:
-        if (self.post_type == Post.ORIGINAL):
+        if (self.post_type_id == Post.ORIGINAL):
             return BasePostParser(original_post).parse()
         else:
             return BasePostParser(echo_reply_post).parse()

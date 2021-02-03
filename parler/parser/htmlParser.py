@@ -28,6 +28,14 @@ def get_element_by_css(html_element, css_selector):
 
 
 @try_except
+def get_all_elements(html_element, html_tag, html_attribute):
+    '''
+    Get all HTML elements that match the html_tag and html_attribute
+    '''
+    return html_element.find_all(html_tag, html_attribute)
+
+
+@try_except
 def get_content(html_element,  html_tag, html_attribute):
     '''
     Get the appropriate HTML element and its child elements specified by the css_selector

@@ -23,7 +23,7 @@ class MentionsParser:
             r"(?<![A-Za-z0-9_!@#\$%&*])@(([A-Za-z0-9_]){20}(?!@))|(?<![A-Za-z0-9_!@#\$%&*])@(([A-Za-z0-9_]){1,19})(?![A-Za-z0-9_]*@)",
             re.UNICODE)
 
-        hashtags = Mentions()
+        mentions = Mentions()
 
         for match in mention_re.finditer(self.text):
 
@@ -31,7 +31,7 @@ class MentionsParser:
             end_index = match.end()
             start_index = end_index - len(username)
 
-            hashtags.add(Mention(username=username,
+            mentions.add(Mention(username=username,
                                  indices=[start_index, end_index]))
 
-        return hashtags
+        return mentions
