@@ -107,14 +107,14 @@ Example mentions given sentence: `"This is my @sample @test!"`
 "mentions":
   [
     {
-      "hashtag_id": "ebf237470e985b2f1a0a8d489743ff96",
+      "user_id": "ebf237470e985b2f1a0a8d489743ff96",
       "indices": [11, 18],
-      "text": "@sample",
+      "username": "@sample",
     },
     {
-      "hashtag_id": "b7ef7e9117491321ffb55bee54c8deed",
+      "user_id": "b7ef7e9117491321ffb55bee54c8deed",
       "indices": [19, 24],
-      "text": "@test",
+      "username": "@test",
     },
   ]
 ```
