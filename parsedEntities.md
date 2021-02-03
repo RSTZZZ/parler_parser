@@ -144,20 +144,22 @@ Example media parsed from a post with multiple mediums:
 "media":
   [
     {
-      "image_src": "https://images.parler.com/44JxOMm2OXIBT6OoSOgj9z9TWWQFtOuZ",
-      "title": "Global defense contractor IT expert testifies in Italian court he and others switched votes in the U.S. presidential race",
-      "excerpt": "Rome, Italy (January 5, 2021) – An employee of the 8th largest global defense contractor, Leonardo SpA, provided a shocking",
-      "link_src": "https://noqreport.com/2021/01/06/global-defense-contractor-it-expert-testifies-in-italian-court-he-and-others-switched-votes-in-the-u-s-presidential-race/",
       "medium_type_id": 1,
       "medium_type": "article",
+      "title": "Global defense contractor IT expert testifies in Italian court he and others switched votes in the U.S. presidential race",
+      "excerpt": "Rome, Italy (January 5, 2021) – An employee of the 8th largest global defense contractor, Leonardo SpA, provided a shocking",
+      "image_src": "https://images.parler.com/44JxOMm2OXIBT6OoSOgj9z9TWWQFtOuZ",
+      "link_src": "https://noqreport.com/2021/01/06/global-defense-contractor-it-expert-testifies-in-italian-court-he-and-others-switched-votes-in-the-u-s-presidential-race/",
+      "sensitive": false,
     },
     {
-      "image_src": null,
-      "title": "Vocaroo | Online voice recorder",
-      "excerpt": "Vocaroo is a quick and easy way to share voice messages over the interwebs.",
-      "link_src": "https://vocaroo.com/1e976QE4oDoy",
       "medium_type_id": 7,
       "medium_type": "website",
+      "title": "Vocaroo | Online voice recorder",
+      "excerpt": "Vocaroo is a quick and easy way to share voice messages over the interwebs.",
+      "image_src": null,
+      "link_src": "https://vocaroo.com/1e976QE4oDoy",
+      "sensitive": false,
     },
   ]
 ```
