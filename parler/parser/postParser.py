@@ -25,71 +25,89 @@ class PostParser():
 
     def parse(self) -> Post:
 
-        echo_byline = htmlParser.get_element_by_css(
-            self.post_page, "div.echo-byline--wrapper")
-
-        echoed_post = htmlParser.get_element_by_css(
-            self.post_page, 'span.reblock.echo--parent'
-        )
-
-        echo_reply_post = htmlParser.get_element_by_css(
-            self.post_page, "span.reblock.show-under-echo")
-
-        original_post = htmlParser.get_element_by_css(
-            self.post_page, 'span.reblock.post'
-        )
-
-        self.post_type_id = self.get_post_type_id(echo_byline, echo_reply_post)
+        self.get_needed_html_sections()
+        self.set_post_type_id()
 
         # Early exit if we cannot determine the post type
         if (self.post_type_id == Post.UNKNOWN):
             return None
 
         # Get the main post -> Original post | Echo reply Post
-        post = Post(self.get_main_post_info(echo_reply_post, original_post))
+        post = Post(self.get_main_post_info())
         post.post_type_id = self.post_type_id
 
         # Fill out echoed post if it exists:
         if (self.post_type_id != Post.ORIGINAL):
-            post.echoed_status = self.get_echoed_post_info(echoed_post)
+            post.echoed_post = self.get_echoed_post_info()
 
-        if (self.post_type_id == Post.ECHO_NO_REPLY):
+        if (self.post_type_id == Post.ECHO_NO_REPLY or self.post_type_id == Post.ECHO_WITH_ROOT_AND_NO_REPLY):
             #   1. Our main post will not get a proper user.
             #   2. Our main post will not have a proper created_at time.
             post.user = self.get_user_from_echo_no_reply()
             post.created_at = self.get_created_at_from_echo_no_reply()
 
             # The comment, echo and upvote found belongs to the echoed post
-            post.echoed_status.comment_count = self.get_comment_count()
-            post.echoed_status.echo_count = self.get_echo_count()
-            post.echoed_status.upvote_count = self.get_upvote_count()
+            post.echoed_post.comment_count = self.get_comment_count()
+            post.echoed_post.echo_count = self.get_echo_count()
+            post.echoed_post.upvote_count = self.get_upvote_count()
         else:
-
             # The comment, echo and upvote found belongs to the main post
             post.comment_count = self.get_comment_count()
             post.echo_count = self.get_echo_count()
             post.upvote_count = self.get_upvote_count()
 
+        if (self.post_type_id == Post.ECHO_WITH_ROOT_AND_NO_REPLY or self.post_type_id == Post.ECHO_WITH_ROOT_AND_REPLY):
+            # Get the root echoed post
+            post.root_echoed_post = self.get_root_echoed_post_info()
+
         return post
 
-    def get_post_type_id(self, echo_byline, echo_reply_post):
+    def get_needed_html_sections(self):
+        self.echo_byline = htmlParser.get_element_by_css(
+            self.post_page, "div.echo-byline--wrapper")
 
-        if echo_byline is None:
-            return Post.ORIGINAL
+        self.root_echoed_post = htmlParser.get_element_by_css(
+            self.post_page, 'span.reblock.echo--root'
+        )
+
+        self.echoed_post = htmlParser.get_element_by_css(
+            self.post_page, 'span.reblock.echo--parent'
+        )
+
+        self.echo_reply_post = htmlParser.get_element_by_css(
+            self.post_page, "span.reblock.show-under-echo")
+
+        self.new_post = htmlParser.get_element_by_css(
+            self.post_page, 'span.reblock.post'
+        )
+
+    def set_post_type_id(self):
+
+        if self.echo_byline is None:
+            self.post_type_id = Post.ORIGINAL
         else:
-            if echo_reply_post is None:
-                return Post.ECHO_NO_REPLY
+            if self.root_echoed_post is None:
+                if self.echo_reply_post is None:
+                    self.post_type_id = Post.ECHO_NO_REPLY
+                else:
+                    self.post_type_id = Post.ECHO_WITH_REPLY
             else:
-                return Post.ECHO_WITH_REPLY
+                if self.echo_reply_post is None:
+                    self.post_type_id = Post.ECHO_WITH_ROOT_AND_NO_REPLY
+                else:
+                    self.post_type_id = Post.ECHO_WITH_ROOT_AND_REPLY
 
-    def get_main_post_info(self, echo_reply_post, original_post) -> BasePost:
+    def get_main_post_info(self) -> BasePost:
         if (self.post_type_id == Post.ORIGINAL):
-            return BasePostParser(original_post).parse()
+            return BasePostParser(self.new_post).parse()
         else:
-            return BasePostParser(echo_reply_post).parse()
+            return BasePostParser(self.echo_reply_post).parse()
 
-    def get_echoed_post_info(self, echoed_post_info) -> BasePost:
-        return BasePostParser(echoed_post_info).parse()
+    def get_echoed_post_info(self) -> BasePost:
+        return BasePostParser(self.echoed_post).parse()
+
+    def get_root_echoed_post_info(self) -> BasePost:
+        return BasePostParser(self.root_echoed_post).parse()
 
     def get_user_from_echo_no_reply(self) -> User:
         return EchoNoReplyUserParser(self.post_page).parse()

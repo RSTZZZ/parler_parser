@@ -20,8 +20,8 @@
     "echo_count": null,
     "upvote_count": null,
     "post_type_id": 2,
-    "post_type": "echo with no reply",
-    "echoed_status": {
+    "post_type": "echoed post",
+    "echoed_post": {
       "created_at": "4 days ago",
       "id": "",
       "text": "Now We The People know what happened to Seth Rich.",
@@ -51,7 +51,8 @@
       "comment_count": "1067",
       "echo_count": "7329",
       "upvote_count": "16871"
-    }
+    },
+    "root_echoed_post": null
   },
   {
     "created_at": "4 days ago",
@@ -74,8 +75,8 @@
     "echo_count": "73",
     "upvote_count": "426",
     "post_type_id": 3,
-    "post_type": "echo with reply",
-    "echoed_status": {
+    "post_type": "echoed post with reply",
+    "echoed_post": {
       "created_at": "4 days ago",
       "id": "",
       "text": "A preview of what to expect as Republicans object to electoral votes today. A review of my Breitbart News coverage:",
@@ -105,7 +106,8 @@
       "comment_count": null,
       "echo_count": null,
       "upvote_count": null
-    }
+    },
+    "root_echoed_post": null
   },
   {
     "created_at": "4 days ago",
@@ -128,8 +130,8 @@
     "echo_count": "7356",
     "upvote_count": "26306",
     "post_type_id": 3,
-    "post_type": "echo with reply",
-    "echoed_status": {
+    "post_type": "echoed post with reply",
+    "echoed_post": {
       "created_at": "4 days ago",
       "id": "",
       "text": "Why are they stopping the vote count in Democrat Chatham county, Georgia?This sounds familiar! 🤨",
@@ -149,7 +151,8 @@
       "comment_count": null,
       "echo_count": null,
       "upvote_count": null
-    }
+    },
+    "root_echoed_post": null
   },
   {
     "created_at": "5 days ago",
@@ -182,8 +185,9 @@
     "echo_count": "0",
     "upvote_count": "0",
     "post_type_id": 1,
-    "post_type": "original",
-    "echoed_status": null
+    "post_type": "new post",
+    "echoed_post": null,
+    "root_echoed_post": null
   },
   {
     "created_at": "4 days ago",
@@ -206,8 +210,8 @@
     "echo_count": null,
     "upvote_count": null,
     "post_type_id": 2,
-    "post_type": "echo with no reply",
-    "echoed_status": {
+    "post_type": "echoed post",
+    "echoed_post": {
       "created_at": "4 days ago",
       "id": "",
       "text": "Washington D.C.",
@@ -237,7 +241,8 @@
       "comment_count": "418",
       "echo_count": "2130",
       "upvote_count": "4815"
-    }
+    },
+    "root_echoed_post": null
   },
   {
     "created_at": "4 days ago",
@@ -259,9 +264,9 @@
     "comment_count": "15",
     "echo_count": "63",
     "upvote_count": "103",
-    "post_type_id": 3,
-    "post_type": "echo with reply",
-    "echoed_status": {
+    "post_type_id": 5,
+    "post_type": "echoed post with root echo and reply",
+    "echoed_post": {
       "created_at": "4 days ago",
       "id": "",
       "text": "BLOCKBUSTER‼️The 'MOAB' — Mother Of All Bombshells — Breaks Open Entire 2020 National Election Fraud SchemeProof of a calculating and intentional plot to take down America by stealing the election. This proof provides the mechanism for each state to recall their slate of electors immediately or face lawsuits and request all federal government agencies to lock down all internal communications, equipment, and documentation from the U.S. Embassy in Rome, Italy. “Make no mistake, this is a coup d’etat that we will stop in the name of justice and free and fair elections,” stated Maria Strollo Zack, Chairman of Nations in Action.- - -SHINE THE LIGHT OF TRUTH, THE BEST DISINFECTANT ... EXPOSE INSIDIOUS EVIL‼️WAKE UP AMERICA‼️ TRANSPARENCY ... ACCOUNTABILITY‼️@realdonaldtrump@stopthesteal @rudyg@jennaellisesq@sidneypowell@linwood @genflynn @krakenwood",
@@ -300,6 +305,27 @@
       "comment_count": null,
       "echo_count": null,
       "upvote_count": null
+    },
+    "root_echoed_post": {
+      "created_at": "1 week ago",
+      "id": "",
+      "text": "So what is it that is so heinous, that the entire D.C. machine, both Democrats and Republicans fear so much, they are willing to band together to make go away, and prevent us from re-electing Trump ? The FBI, the InJustice Dept including the Attorney General and the Supreme Court, including the Chief Justice ? What is it ? The fact that they have been stealing elections for decades ? The foreign aid is a kick back scheme ? Or that they are all pedophiles, who have been participating in these unspeakable perverted acts ? A total sell out of America to foreign interests ? Or ALL of these things, and more. So not only do we have to stand up to the stolen Election, we DO NOT want to be ruled by these immoral, criminal, treasous bastards ! It's NOT about Trump ! He has, however exposed these bastards, EVERY ONE OF THEM ! Now what needs to happen ? We need to start getting involved with like minded folks, and be as organized as they are.",
+      "user": {
+        "user_id": "f24d2421da0c7b187b2718e7d2755ca1",
+        "photo": "https://images.parler.com/1bc63211a25f4902847b108888a0160e_256",
+        "badge": "Citizen",
+        "name": "KABarry1901",
+        "username": "@KABarry1901",
+        "description": null,
+        "description_hashtags": null
+      },
+      "view_count": "15246",
+      "hashtags": [],
+      "mentions": [],
+      "media": [],
+      "comment_count": null,
+      "echo_count": null,
+      "upvote_count": null
     }
   },
   {
@@ -333,8 +359,84 @@
     "echo_count": "1",
     "upvote_count": "1",
     "post_type_id": 1,
-    "post_type": "original",
-    "echoed_status": null
+    "post_type": "new post",
+    "echoed_post": null,
+    "root_echoed_post": null
+  },
+  {
+    "created_at": "5 days ago",
+    "id": "",
+    "text": null,
+    "user": {
+      "user_id": "b4af396aaf4218d0860efd556254a93e",
+      "photo": "https://company-media.parler.com/par-default-profile-picture.jpg",
+      "badge": null,
+      "name": "boneboy81",
+      "username": "@boneboy81",
+      "description": null,
+      "description_hashtags": null
+    },
+    "view_count": null,
+    "hashtags": [],
+    "mentions": [],
+    "media": [],
+    "comment_count": null,
+    "echo_count": null,
+    "upvote_count": null,
+    "post_type_id": 4,
+    "post_type": "echoed post with root echo",
+    "echoed_post": {
+      "created_at": "5 days ago",
+      "id": "",
+      "text": "Make her famous!",
+      "user": {
+        "user_id": "f1bf7f50362ce0e814f069d7efc37494",
+        "photo": "https://images.parler.com/135928688de64137b1b23ef98d91e1fe_256",
+        "badge": null,
+        "name": "Tjginnynm ",
+        "username": "@Tjginnynm",
+        "description": null,
+        "description_hashtags": null
+      },
+      "view_count": "4612",
+      "hashtags": [],
+      "mentions": [],
+      "media": [],
+      "comment_count": "511",
+      "echo_count": "2838",
+      "upvote_count": "1964"
+    },
+    "root_echoed_post": {
+      "created_at": "5 days ago",
+      "id": "",
+      "text": "Please share this photo. This women assaulted a Trump supporter busting her eye open and ran away. She was wearing an “Admiral Security Services” jacket so it seems she works for them. The closest Admiral Security places in DC are either in Bethesda, MD or Baltimore, MD",
+      "user": {
+        "user_id": "215cfb3a5d98b9edd661fb65e08d66cb",
+        "photo": "https://company-media.parler.com/par-default-profile-picture.jpg",
+        "badge": "Citizen",
+        "name": "Name Hidden",
+        "username": "@Private User",
+        "description": null,
+        "description_hashtags": null
+      },
+      "view_count": "311964",
+      "hashtags": [],
+      "mentions": [],
+      "media": [
+        {
+          "medium_type_id": 4,
+          "medium_type": "image",
+          "title": null,
+          "excerpt": null,
+          "image_src": "https://api.parler.com/l/QDxIr",
+          "link_src": null,
+          "sensitive": false
+        }
+      ],
+      "comment_count": null,
+      "echo_count": null,
+      "upvote_count": null
+    }
   },
   {
     "created_at": "4 days ago",
@@ -357,8 +459,8 @@
     "echo_count": null,
     "upvote_count": null,
     "post_type_id": 2,
-    "post_type": "echo with no reply",
-    "echoed_status": {
+    "post_type": "echoed post",
+    "echoed_post": {
       "created_at": "4 days ago",
       "id": "",
       "text": "",
@@ -388,7 +490,8 @@
       "comment_count": "121",
       "echo_count": "1606",
       "upvote_count": "1073"
-    }
+    },
+    "root_echoed_post": null
   },
   {
     "created_at": "4 days ago",
@@ -411,8 +514,8 @@
     "echo_count": "2933",
     "upvote_count": "3562",
     "post_type_id": 3,
-    "post_type": "echo with reply",
-    "echoed_status": {
+    "post_type": "echoed post with reply",
+    "echoed_post": {
       "created_at": "4 days ago",
       "id": "",
       "text": "EXPLOSIVE: OBAMA AND RENZI FORMER PM OF ITALY ORCHSTRATED THE THEFT OF U.S. ELECTIONSHT @blueskyreport",
@@ -442,6 +545,7 @@
       "comment_count": null,
       "echo_count": null,
       "upvote_count": null
-    }
+    },
+    "root_echoed_post": null
   }
 ]

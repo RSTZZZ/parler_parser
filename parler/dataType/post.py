@@ -27,10 +27,13 @@ class Post(BasePost):
        ...
        "post_type_id" : int => [1 - 3]
        "post_type" : str => 
-                     1 - "original" 
-                     2 - "echo"
-                     3 - "echo with reply"
-       "echoed_status" : <basePost object converted to dict>
+                     1 - "new post" 
+                     2 - "echoed post"
+                     3 - "echoed post with reply"
+                     4 - "echoed post with root echo and no reply"
+                     5 - "echoed post with root echo and reply"
+       "echoed_post" : <basePost object converted to dict>
+       "root_echoed_post" : <basePost object converted to dict>
     }
     '''
 
@@ -38,17 +41,22 @@ class Post(BasePost):
     ORIGINAL = 1
     ECHO_NO_REPLY = 2
     ECHO_WITH_REPLY = 3
+    ECHO_WITH_ROOT_AND_NO_REPLY = 4
+    ECHO_WITH_ROOT_AND_REPLY = 5
 
     POST_TYPE_MAP = {
         UNKNOWN: "unknown",
-        ORIGINAL: "original",
-        ECHO_NO_REPLY: "echo with no reply",
-        ECHO_WITH_REPLY: "echo with reply"
+        ORIGINAL: "new post",
+        ECHO_NO_REPLY: "echoed post",
+        ECHO_WITH_REPLY: "echoed post with reply",
+        ECHO_WITH_ROOT_AND_NO_REPLY: "echoed post with root echo",
+        ECHO_WITH_ROOT_AND_REPLY: "echoed post with root echo and reply",
     }
 
     def __init__(self, main_post: BasePost,
                  post_type_id: int = UNKNOWN,
-                 echoed_status: BasePost = None):
+                 echoed_post: BasePost = None,
+                 root_echoed_post: BasePost = None):
 
         super().__init__(main_post.created_at,
                          main_post.text,
@@ -62,11 +70,13 @@ class Post(BasePost):
                          main_post.upvote_count)
 
         self.post_type_id = post_type_id
-        self.echoed_status = echoed_status
+        self.echoed_post = echoed_post
+        self.root_echoed_post = root_echoed_post
 
     def convert(self):
         result = super().convert()
         result["post_type_id"] = self.post_type_id
         result["post_type"] = self.POST_TYPE_MAP[self.post_type_id]
-        result["echoed_status"] = Util.convert(self.echoed_status)
+        result["echoed_post"] = Util.convert(self.echoed_post)
+        result["root_echoed_post"] = Util.convert(self.root_echoed_post)
         return result
