@@ -16,6 +16,7 @@ class Medium:
             5 - "link"
             6 - "video"
             7 - "website"
+        sensitive : bool
     }
 
     '''
@@ -45,6 +46,7 @@ class Medium:
                  excerpt: str = None,
                  link_src: str = None,
                  medium_type: str = None,
+                 sensitive: bool = None,
                  ):
 
         self.image_src = image_src
@@ -52,13 +54,15 @@ class Medium:
         self.excerpt = excerpt
         self.link_src = link_src
         self.medium_type = medium_type
+        self.sensitive = sensitive
 
     def convert(self):
         return {
-            "image_src": self.image_src,
+            "medium_type_id": self.MEDIA_TYPE_MAP[self.medium_type],
+            "medium_type": self.medium_type,
             "title": self.title,
             "excerpt": self.excerpt,
+            "image_src": self.image_src,
             "link_src": self.link_src,
-            "medium_type_id": self.MEDIA_TYPE_MAP[self.medium_type],
-            "medium_type": self.medium_type
+            "sensitive": self.sensitive,
         }

@@ -125,7 +125,7 @@ A medium entity contain the following field:
 
 A post can have multiple mediums.
 
-The following table explains medium type of which field will be null:
+The following table explains which field inside the medium type will be null:
 
 | Medium Type ID | Medium Type | Image Src | Title  | Excerpt | Link Src |
 | :------------: | ----------- | :-------: | :----: | :-----: | :------: |

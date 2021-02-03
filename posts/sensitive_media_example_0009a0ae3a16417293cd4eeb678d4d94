@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#">
+<head>
+    <title>@Logale42 - Logale42 - </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Parleyed on Parler">
+    <link rel="stylesheet" href="/512ae92f/stylesheets/font.css">
+    <link rel="stylesheet" href="/512ae92f/stylesheets/style.css" />
+    <link rel="stylesheet" href="/512ae92f/stylesheets/prime.min.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:title" content="@Logale42 - Logale42 - " />
+    <meta property="og:description" content="Parleyed on Parler" />
+    <meta property="og:url" content="/post/0009a0ae3a16417293cd4eeb678d4d94" />
+    <meta property="og:site_name" content="Parler" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="@Logale42 - Logale42 - " />
+    <meta name="twitter:description" content="Parleyed on Parler" />
+    <meta name="twitter:site" content="@parler_app" />
+
+    
+
+    
+    
+    <meta property="og:image" content="https://images.parler.com/2c98779ab3f446e0a8f77dee477f15c3_256" />
+    <meta name="twitter:image" content="https://images.parler.com/2c98779ab3f446e0a8f77dee477f15c3_256" />
+    
+    <link rel="icon" type="image/x-icon" href="/512ae92f/images/parler/favicon.ico">
+
+    
+
+</head>
+<body>
+
+<div id="main-toolbar--wrapper" class="w--100">
+    
+    
+    <div onclick="sidenavClose()" id="sidenav--overlay-blocker"></div>
+
+    <div id="main-sidenav--container">
+        <div id="ms--header" class="p--flex pf--jsb pf--ac pf--row w--100 gutter--15">
+            <div id="ms--header--branding">
+                <img src="/512ae92f/images/branding/mark.svg" alt="Parler Mark">
+            </div>
+
+            <div id="ms--header--actions">
+                <div onclick="sidenavClose()" id="ms--header--close--wrapper">
+                    <img src="/512ae92f/images/icons/close.svg" alt="Close Side Navigation">
+                </div>
+            </div>
+        </div>
+
+        <div id="ms--body">
+            <div id="ms--menu--wrapper">
+                <div id="ms--menu" class="p--flex pf--col">
+                    <a href="https://parler.com/auth/access" class="ms--menu-item"> Login/Register </a>
+                    <a href="/" class="ms--menu-item"> Home </a>
+                    <a href="/discover" class="ms--menu-item"> Discover </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="ms--footer" class="p--flex pf--col pf--ac pf--jsa">
+            <span class="version-text">Version 1.1.2</span>
+        </div>
+    </div>
+
+    <div id="main-toolbar">
+        <div id="mt--content" class="gutter--30 p--flex pf--jsb pf--ac pf--row container--main">
+            <div class="p--flex pf--row pf--jsb pf--ac">
+                <div onclick="sidenavOpen()" id="main-nav-trigger--wrapper" title="Main Menu" aria-label="Main Menu">
+                    <div id="main-nav-trigger">
+                        <span class="main-nav-trigger--line"></span>
+                        <span class="main-nav-trigger--line"></span>
+                        <span class="main-nav-trigger--line"></span>
+                    </div>
+                </div>
+
+                <div id="branding">
+                    <img src="/512ae92f/images/branding/logo.svg" alt="Parler Logo">
+                </div>
+            </div>
+
+            <div class="p--flex pf--row pf--jsb pf--ac">
+                <div id="main-nav">
+                    <img src="/512ae92f/images/icons/home.svg" alt="Home">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<main id="site--wrapper" class="container--main">
+    <div class="column--single p--flex pf--col pf--jsa pf--ac">
+        <div class="post--card--wrapper">
+        
+    
+    
+    <div class="card card--post-container w--100">
+        
+            
+            <div class="echo-byline--wrapper p--flex pf--row pf--ac">
+                <div class="eb--col eb--icon">
+                    <img src="/512ae92f/images/icons/echo.svg" alt="">
+                </div>
+                <div class="eb--col eb--profile-pic">
+                    <img src="https://images.parler.com/2c98779ab3f446e0a8f77dee477f15c3_256" alt="">
+                </div>
+                <div class="eb--col eb--statement">
+                    <span class="reblock">Echoed By Logale42</span>
+                </div>
+                <span class="separator">·</span>
+                <div class="eb--col eb--timestamp">
+                    <span class="reblock">4 days ago</span>
+                </div>
+            </div>
+            
+            <span class="reblock root-and-parent--wrapper">
+                
+                
+                
+            </span>
+        
+        
+        <span class="reblock parent-and-post--wrapper">
+            
+            
+            
+            <span class="reblock echo--parent">
+                <div class="card--header p--flex pf--row">
+        <div class="ch--col ch--avatar-col">
+            <div class="ch--avatar--wrapper">
+                <img src="https://images.parler.com/92663af3508c43c48d087a99560d898c_256" alt="Post Author Profile Pic">
+            </div>
+            
+            <div class="ch--avatar--badge--wrapper">
+                
+                    <img src="/512ae92f/images/badges/00.svg" alt="Badge">
+                
+            </div>
+            
+        </div>
+
+        <div class="ch--col ch--meta-col p--flex pf--col pf--jc">
+            
+            <a href="/profile/MeyersMike/posts" class="card-meta--row">
+            
+                <span class="author--name">Meyers Mike</span>
+                <span class="separator">·</span>
+                <span class="author--username">@MeyersMike</span>
+            
+            </a>
+            
+            <span class="card-meta--row">
+              <span class="post--timestamp">4 days ago</span>
+              <span class="separator">·</span>
+              <span class="impressions--wrapper">
+                <div class="impressions--icon--wrapper">
+                  <img src="/512ae92f/images/icons/impressions.svg" alt="Impressions">
+                </div>
+                <span class="impressions--count">78632</span>
+              </span>
+            </span>
+        </div>
+
+        <div class="ch--col ch--menu-col">
+            <div class="ch--more-actions--wrapper"></div>
+        </div>
+    </div>
+
+    <div class="card--body">
+        <p></p>
+        
+            
+    
+    <div class="media-container--wrapper w--100">
+        
+        <div id="sensitive--content--wrapper-6389057794904f159952e0376f1bc562" class="sensitive--content--wrapper w--100">
+            <div id="sensitive--content-action-6389057794904f159952e0376f1bc562" class="sensitive--content-action">
+        <div class="sensitive--placeholder-top">
+                <svg class="global-sensitive-icon" data-name="Layer 2" id="Layer_2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+                    <path d="M100,153c-33.9,0-63.53-21.7-72.73-53a72.32,72.32,0,0,1,20.3-32.63,3.36,3.36,0,0,0,.11-4.84l-.17-.17a3.37,3.37,0,0,0-4.68-.08A79.35,79.35,0,0,0,20,100c9.17,34.5,41.51,60,80,60a84.76,84.76,0,0,0,32.22-6.31,3.37,3.37,0,0,0,1.12-5.5l-.23-.23a3.38,3.38,0,0,0-3.68-.71A78,78,0,0,1,100,153Z"></path>
+                    <path d="M100,47c33.9,0,63.53,21.7,72.73,53a72.32,72.32,0,0,1-20.3,32.63,3.36,3.36,0,0,0-.11,4.84l.17.17a3.37,3.37,0,0,0,4.68.08A79.35,79.35,0,0,0,180,100c-9.17-34.5-41.51-60-80-60a84.76,84.76,0,0,0-32.22,6.31,3.37,3.37,0,0,0-1.12,5.5l.23.23a3.38,3.38,0,0,0,3.68.71A78,78,0,0,1,100,47Z"></path>
+                    <path d="M103.67,67.2a33,33,0,0,1,26.79,45.47,3.35,3.35,0,0,0,.72,3.66l.23.23a3.35,3.35,0,0,0,5.45-1A40,40,0,0,0,84.45,63.14a3.35,3.35,0,0,0-1,5.45l.23.23a3.35,3.35,0,0,0,3.66.72A32.88,32.88,0,0,1,103.67,67.2Z"></path>
+                    <path d="M96.33,132.8A33,33,0,0,1,69.54,87.33a3.35,3.35,0,0,0-.72-3.66l-.23-.23a3.35,3.35,0,0,0-5.45,1,40,40,0,0,0,52.41,52.41,3.35,3.35,0,0,0,1-5.45l-.23-.23a3.35,3.35,0,0,0-3.66-.72A32.88,32.88,0,0,1,96.33,132.8Z"></path>
+                    <path d="M176.55,180.05a3.48,3.48,0,0,1-2.48-1L21,25.93A3.5,3.5,0,1,1,25.93,21L179,174.07a3.49,3.49,0,0,1,0,5A3.46,3.46,0,0,1,176.55,180.05Z"></path>
+                </svg>
+            <h2>Sensitive Content</h2>
+            <p> This contains sensitive content which some people may find offensive or disturbing </p>
+        </div>
+        <div onclick="toggleSensitive('6389057794904f159952e0376f1bc562')" class="sensitive--bar-bottom">
+            <h2>See This Content</h2>
+        </div>
+    </div>
+
+        
+        
+            
+                
+                
+                
+                    <div onclick="openImageModal(event); event.stopPropagation()" class="mc-image--container w--100 p--flex pf--col pf--ac">
+        <div id="mc-image--modal--41612674" class="mc-image--modal">
+            <span onclick="closeImageModal(event); event.stopPropagation()" class="mc-image--modal--close">X</span>
+            <div class="mc-image--modal--element--wrapper">
+                <img class="mc-image--modal--element" src="https://api.parler.com/l/szj23" alt="Image">
+            </div>
+        </div>
+        <div class="mc-image--wrapper">
+            <img src="https://api.parler.com/l/szj23" alt="Image">
+        </div>
+    </div>
+
+                
+                
+                
+                
+                
+            
+        
+        
+        </div>
+        
+    </div>
+    
+
+        
+    </div>
+
+            </span>
+            
+            
+        </span>
+        
+        <div class="card--footer">
+            
+            
+            <span class="reblock">
+                <div class="post--actions p--flex pf--ac pf--jsb">
+        <div class="post--actions--row pa--main-row p--flex pf--ac pf--jsb">
+            <div class="pa--item--wrapper">
+                <img src="/512ae92f/images/icons/comment.svg" alt="Post Comments">
+                <span class="pa--item--count">121</span>
+            </div>
+            <div class="pa--item--wrapper">
+                <img src="/512ae92f/images/icons/echo.svg" alt="Post Echoes">
+                <span class="pa--item--count">1606</span>
+            </div>
+            <div class="pa--item--wrapper">
+                <img src="/512ae92f/images/icons/upvote.svg" alt="Post Upvotes">
+                <span class="pa--item--count">1073</span>
+            </div>
+        </div>
+    </div>
+
+            </span>
+            
+            
+        </div>
+    </div>
+
+        
+    </div>
+
+        <div class="login-more">
+            <div class="button--wrapper">
+                <a href="https://parler.com/auth/access">
+                    <button class="gradient-btn bold">See More At Parler</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="footer--container">
+    <footer id="main-footer--container">
+        <div id="main-footer" class="w--100 gutter--15 container--main">
+            <div id="mf--nav--wrapper" class="p--flex pf--row pf--jsb pf--ac">
+                <div id="mf--nav">
+                    <a href="https://legal.parler.com/documents/privacypolicy.pdf" target="_blank" class="mf--fn--item"> About </a>
+                    <a href="https://faq.parler.com" target="_blank" class="mf--fn--item"> Help </a>
+                    <a href="https://legal.parler.com/documents/privacypolicy.pdf" target="_blank" class="mf--fn--item"> Privacy </a>
+                    <a href="https://legal.parler.com/documents/guidelines.pdf" target="_blank" class="mf--fn--item"> Community Guidelines </a>
+                    <a href="https://legal.parler.com/documents/useragreement.pdf" target="_blank" class="mf--fn--item"> Terms of Service </a>
+                </div>
+                <span id="copyright">© 2020 Parler</span>
+            </div>
+        </div>
+        <script src="/512ae92f/javascript/gen.js"></script>
+        <script src="/512ae92f/javascript/slider.js"></script>
+        <script src="/512ae92f/javascript/modals.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    </footer>
+
+</div>
+
+</body>
+
+</html>

@@ -19,8 +19,17 @@ class MediaParser:
         Helper function to find all medium inside the post
         '''
 
+        # There is always only one media container which can
+        #  1. contain a sensitive content wrapper.
+        #  2. contain one or more medium.
+
         medium_list = htmlParser.get_all_elements(
             self.post, 'div', re.compile('mc-.*--container'))
+
+        sensitive_element = htmlParser.get_element_by_css(
+            self.post, "div.sensitive--content--wrapper")
+
+        sensitive = (sensitive_element is not None)
 
         media = Media()
 
@@ -28,11 +37,11 @@ class MediaParser:
             return media
 
         for medium in medium_list:
-            media.add(self.parse_medium(medium))
+            media.add(self.parse_medium(medium, sensitive))
 
         return media
 
-    def parse_medium(self, medium):
+    def parse_medium(self, medium, sensitive):
         '''
         Helper function to parse a medium
         '''
@@ -44,7 +53,8 @@ class MediaParser:
             return Medium(
                 image_src=htmlParser.get_image_src(
                     medium, {'class': "mc-image--wrapper"}, html_tag="div"),
-                medium_type=medium_type
+                medium_type=medium_type,
+                sensitive=sensitive
             )
 
         image_src = htmlParser.get_image_src(
@@ -62,4 +72,9 @@ class MediaParser:
         link_src = None if link_element is None else htmlParser.get_text(
             link_element, 'a', {}).strip()
 
-        return Medium(image_src=image_src, title=title, excerpt=excerpt, link_src=link_src, medium_type=medium_type)
+        return Medium(image_src=image_src,
+                      title=title,
+                      excerpt=excerpt,
+                      link_src=link_src,
+                      medium_type=medium_type,
+                      sensitive=sensitive)
