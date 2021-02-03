@@ -114,28 +114,29 @@ Example mentions given sentence: `"This is my @sample @test!"`
 
 A medium entity contain the following field:
 
-| Field            | Type  | Nullable | Description                                               |
-| ---------------- | ----- | -------- | --------------------------------------------------------- |
-| `image_src`      | `str` | `true`   | Source to the image used.                                 |
-| `title`          | `str` | `true`   | Title that is provided                                    |
-| `excerpt`        | `str` | `true`   | Excerpt that is provided                                  |
-| `link_src`       | `str` | `true`   | Source to the medium                                      |
-| `medium_type_id` | `int` | `false`  | ID from [1 - 7]. Check table below for detail.            |
-| `medium_type`    | `str` | `false`  | Medium type found. Check table below for possible values. |
+| Field            | Type   | Nullable | Description                                               |
+| ---------------- | ------ | -------- | --------------------------------------------------------- |
+| `medium_type_id` | `int`  | `false`  | ID from [1 - 7]. Check table below for detail.            |
+| `medium_type`    | `str`  | `false`  | Medium type found. Check table below for possible values. |
+| `title`          | `str`  | `true`   | Title that is provided                                    |
+| `excerpt`        | `str`  | `true`   | Excerpt that is provided                                  |
+| `image_src`      | `str`  | `true`   | Source to the image used.                                 |
+| `link_src`       | `str`  | `true`   | Source to the medium                                      |
+| `sensitive`      | `bool` | `false`  | Whether the medium is marked sensitive or not             |
 
 A post can have multiple mediums.
 
 The following table explains which field inside the medium type will be null:
 
-| Medium Type ID | Medium Type | Image Src | Title  | Excerpt | Link Src |
-| :------------: | ----------- | :-------: | :----: | :-----: | :------: |
-|       1        | `article`   |           |        |         |          |
-|       2        | `audio`     |  `null`   |        |         |          |
-|       3        | `iframe`    |  `null`   |        |         |          |
-|       4        | `image`     |           | `null` | `null`  |  `null`  |
-|       5        | `link`      |           | `null` | `null`  |          |
-|       6        | `video`     |  `null`   |        |         |          |
-|       7        | `website`   |           |        |         |          |
+| Medium Type ID | Medium Type | Title  | Excerpt | Image Src | Link Src | Sensitive |
+| :------------: | ----------- | :----: | :-----: | :-------: | :------: | :-------: |
+|       1        | `article`   |        |         |           |          |           |
+|       2        | `audio`     |        |         |  `null`   |          |           |
+|       3        | `iframe`    |        |         |  `null`   |          |           |
+|       4        | `image`     | `null` | `null`  |           |  `null`  |           |
+|       5        | `link`      | `null` | `null`  |           |          |           |
+|       6        | `video`     |        |         |  `null`   |          |           |
+|       7        | `website`   |        |         |           |          |           |
 
 Example media parsed from a post with multiple mediums:
 
