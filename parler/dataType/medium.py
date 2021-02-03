@@ -55,8 +55,8 @@ class Medium:
 
     def convert(self):
         return {
-            "image_src": self.title,
-            "title": self.excerpt,
+            "image_src": self.image_src,
+            "title": self.title,
             "excerpt": self.excerpt,
             "link_src": self.link_src,
             "medium_type_id": self.MEDIA_TYPE_MAP[self.medium_type],
