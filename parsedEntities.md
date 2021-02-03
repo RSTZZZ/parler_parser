@@ -19,7 +19,8 @@ A post object contains the following fields:
 | `comment_count` | `int`                 | `true`   | # of comments made to this post                                                                         |
 | `echo_count`    | `int`                 | `true`   | # of echoes made to this post                                                                           |
 | `upvote_count`  | `int`                 | `true`   | # of upvotes made to this post                                                                          |
-| `post_type`     | `int`                 | `true`   | `1` - original post, `2` - post that echoes without a reply, `3` - post that echoes with a reply        |
+| `post_type_id`  | `int`                 | `true`   | `1` - original post, `2` - echo with no reply, `3` - echo with reply                                    |
+| `post_type`     | `int`                 | `true`   | 'original post', 'echo with no reply', 'echo with reply'                                                |
 | `echoed_status` | [`post`](#post)       | `true`   | The echoed `post`. Includes all the same fields except `post_type` and `echoed_status`                  |
 
 For examples, see [sample_output](./sample_output.json)
@@ -111,14 +112,51 @@ Example mentions given sentence: `"This is my @sample @test!"`
 
 ## Media
 
-A media entity contain the following field:
+A medium entity contain the following field:
 
-- Usually only one is filled...
+| Field            | Type  | Nullable | Description                                               |
+| ---------------- | ----- | -------- | --------------------------------------------------------- |
+| `image_src`      | `str` | `true`   | Source to the image used.                                 |
+| `title`          | `str` | `true`   | Title that is provided                                    |
+| `excerpt`        | `str` | `true`   | Excerpt that is provided                                  |
+| `link_src`       | `str` | `true`   | Source to the medium                                      |
+| `medium_type_id` | `int` | `false`  | ID from [1 - 7]. Check table below for detail.            |
+| `medium_type`    | `str` | `false`  | Medium type found. Check table below for possible values. |
 
-| Field     | Type    | Nullable | Description                                                                                                                                                               |
-| --------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `article` | `str`   | `true`   | A linked article in the post: `{ "title" : "example title", "excerpt" : "example excerpt", "src" : "url source to the article", "image" "image source for the website" }` |
-| `audio`   | `Audio` | `true`   | A linked audio in the post: `{"title": "example title", "excerpt": "example excerpt", "src": "url source to the audio",}`                                                 |
-| `image`   | `str`   | `true`   | The url source to the linked image                                                                                                                                        |
-| `link`    | `str`   | `true`   | A linked link:`{ "src" : "url source to the link", "image" "image source for the link"}`                                                                                  |
-| `video`   | `Video` | `true`   | A linked video in the post: `{ "title": "example title", "excerpt": "example excerpt", "src": "url source to the video",}`                                                |
+A post can have multiple mediums.
+
+The following table explains medium type of which field will be null:
+
+| Medium Type ID | Medium Type | Image Src | Title  | Excerpt | Link Src |
+| :------------: | ----------- | :-------: | :----: | :-----: | :------: |
+|       1        | `article`   |           |        |         |          |
+|       2        | `audio`     |  `null`   |        |         |          |
+|       3        | `iframe`    |  `null`   |        |         |          |
+|       4        | `image`     |           | `null` | `null`  |  `null`  |
+|       5        | `link`      |           | `null` | `null`  |          |
+|       6        | `video`     |  `null`   |        |         |          |
+|       7        | `website`   |           |        |         |          |
+
+Example media parsed from a post with multiple mediums:
+
+```yaml
+"media":
+  [
+    {
+      "image_src": "https://images.parler.com/44JxOMm2OXIBT6OoSOgj9z9TWWQFtOuZ",
+      "title": "Global defense contractor IT expert testifies in Italian court he and others switched votes in the U.S. presidential race",
+      "excerpt": "Rome, Italy (January 5, 2021) – An employee of the 8th largest global defense contractor, Leonardo SpA, provided a shocking",
+      "link_src": "https://noqreport.com/2021/01/06/global-defense-contractor-it-expert-testifies-in-italian-court-he-and-others-switched-votes-in-the-u-s-presidential-race/",
+      "medium_type_id": 1,
+      "medium_type": "article",
+    },
+    {
+      "image_src": null,
+      "title": "Vocaroo | Online voice recorder",
+      "excerpt": "Vocaroo is a quick and easy way to share voice messages over the interwebs.",
+      "link_src": "https://vocaroo.com/1e976QE4oDoy",
+      "medium_type_id": 7,
+      "medium_type": "website",
+    },
+  ]
+```
