@@ -49,7 +49,7 @@ class Post(BasePost):
         ORIGINAL: "new post",
         ECHO_NO_REPLY: "echoed post",
         ECHO_WITH_REPLY: "echoed post with reply",
-        ECHO_WITH_ROOT_AND_NO_REPLY: "echoed post with root echo",
+        ECHO_WITH_ROOT_AND_NO_REPLY: "echoed post with root echo and no reply",
         ECHO_WITH_ROOT_AND_REPLY: "echoed post with root echo and reply",
     }
 

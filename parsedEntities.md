@@ -19,11 +19,19 @@ A post object contains the following fields:
 | `comment_count` | `int`                 | `true`   | # of comments made to this post                                                                         |
 | `echo_count`    | `int`                 | `true`   | # of echoes made to this post                                                                           |
 | `upvote_count`  | `int`                 | `true`   | # of upvotes made to this post                                                                          |
-| `post_type_id`  | `int`                 | `true`   | `1` - original post, `2` - echo with no reply, `3` - echo with reply                                    |
-| `post_type`     | `int`                 | `true`   | 'original post', 'echo with no reply', 'echo with reply'                                                |
+| `post_type_id`  | `int`                 | `true`   | ID in [1- 5]. See table below for details.                                                              |
+| `post_type`     | `int`                 | `true`   | Full name of the post type. See table below for details.                                                |
 | `echoed_status` | [`post`](#post)       | `true`   | The echoed `post`. Includes all the same fields except `post_type` and `echoed_status`                  |
 
 For examples, see [sample_output](./sample_output.json)
+
+| Post Type ID | Post Type                               | Description                                                                              |
+| ------------ | --------------------------------------- | ---------------------------------------------------------------------------------------- |
+| 1            | new `post`                              | A whole new `post` made by the `user`.                                                   |
+| 2            | echoed `post`                           | A `post` the `user` chose to `echo`.                                                     |
+| 3            | echoed post with reply                  | A `post` the `user` chose to `echo` with a `reply`                                       |
+| 4            | echoed post with root echo and no reply | A `post` the `user` chose to `echo` which already `echoes` another `post`                |
+| 5            | echoed post with root echo and reply    | A `post` the `user` chose to `echo` with a `reply` which already `echoes` another `post` |
 
 ## User:
 

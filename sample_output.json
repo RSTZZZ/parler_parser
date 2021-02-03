@@ -384,7 +384,7 @@
     "echo_count": null,
     "upvote_count": null,
     "post_type_id": 4,
-    "post_type": "echoed post with root echo",
+    "post_type": "echoed post with root echo and no reply",
     "echoed_post": {
       "created_at": "5 days ago",
       "id": "",
