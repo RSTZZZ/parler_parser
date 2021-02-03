@@ -6,32 +6,33 @@ The following are the different entities that are parsed from the parler posts a
 
 A post object contains the following fields:
 
-| Field           | Type                  | Nullable | Description                                                                                             |
-| --------------- | --------------------- | -------- | ------------------------------------------------------------------------------------------------------- |
-| `created_at`    | `str`                 | `false`  | Time stamp of post in the HTML                                                                          |
-| `id`            | `str`                 | `false`  | md5Hash of something... still deciding                                                                  |
-| `text`          | `str`                 | `true`   | The actual UTF-8 text of the post                                                                       |
-| `user`          | [`User`](#user)       | `false`  | The user who made the post.                                                                             |
-| `view_count`    | `int`                 | `true`   | # of impressions / viewers who saw the post. For posts that are simply echoed, no impressions are given |
-| `hashtags`      | [`Hashtag`](#hashtag) | `true`   | Hashtags extracted from `text`                                                                          |
-| `mentions`      | [`Mention`](#mention) | `true`   | Mentions extracted from `text`                                                                          |
-| `media`         | [`Media`](#media)     | `true`   | Any linked media for this post.                                                                         |
-| `comment_count` | `int`                 | `true`   | # of comments made to this post                                                                         |
-| `echo_count`    | `int`                 | `true`   | # of echoes made to this post                                                                           |
-| `upvote_count`  | `int`                 | `true`   | # of upvotes made to this post                                                                          |
-| `post_type_id`  | `int`                 | `true`   | ID in [1- 5]. See table below for details.                                                              |
-| `post_type`     | `int`                 | `true`   | Full name of the post type. See table below for details.                                                |
-| `echoed_status` | [`post`](#post)       | `true`   | The echoed `post`. Includes all the same fields except `post_type` and `echoed_status`                  |
+| Field              | Type                  | Nullable | Description                                                                                                                            |
+| ------------------ | --------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `created_at`       | `str`                 | `false`  | Time stamp of post in the HTML                                                                                                         |
+| `id`               | `str`                 | `false`  | md5Hash of something... still deciding                                                                                                 |
+| `text`             | `str`                 | `true`   | The actual UTF-8 text of the post                                                                                                      |
+| `user`             | [`User`](#user)       | `false`  | The user who made the post.                                                                                                            |
+| `view_count`       | `int`                 | `true`   | # of impressions / viewers who saw the post. For posts that are simply echoed, no impressions are given                                |
+| `hashtags`         | [`Hashtag`](#hashtag) | `true`   | Hashtags extracted from `text`                                                                                                         |
+| `mentions`         | [`Mention`](#mention) | `true`   | Mentions extracted from `text`                                                                                                         |
+| `media`            | [`Media`](#media)     | `true`   | Any linked media for this post.                                                                                                        |
+| `comment_count`    | `int`                 | `true`   | # of comments made to this post                                                                                                        |
+| `echo_count`       | `int`                 | `true`   | # of echoes made to this post                                                                                                          |
+| `upvote_count`     | `int`                 | `true`   | # of upvotes made to this post                                                                                                         |
+| `post_type_id`     | `int`                 | `false`  | ID in [1- 5]. See table below for details.                                                                                             |
+| `post_type`        | `int`                 | `false`  | Full name of the post type. See table below for details.                                                                               |
+| `echoed_post`      | [`post`](#post)       | `true`   | The echoed `post`. Includes all the same fields except `post_type_id`, `post_type`, `echoed_post`, and `root_echoed_post`.             |
+| `root_echoed_post` | [`post`](#post)       | `true`   | The root of the echoed `post`. Includes all the same fields except `post_type_id`, `post_type`, `echoed_post`, and `root_echoed_post`. |
 
 For examples, see [sample_output](./sample_output.json)
 
-| Post Type ID | Post Type                               | Description                                                                              |
-| ------------ | --------------------------------------- | ---------------------------------------------------------------------------------------- |
-| 1            | new `post`                              | A whole new `post` made by the `user`.                                                   |
-| 2            | echoed `post`                           | A `post` the `user` chose to `echo`.                                                     |
-| 3            | echoed post with reply                  | A `post` the `user` chose to `echo` with a `reply`                                       |
-| 4            | echoed post with root echo and no reply | A `post` the `user` chose to `echo` which already `echoes` another `post`                |
-| 5            | echoed post with root echo and reply    | A `post` the `user` chose to `echo` with a `reply` which already `echoes` another `post` |
+| Post Type ID | Post Type                                     | Description                                                                              |
+| ------------ | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| 1            | new `post`                                    | A whole new `post` made by the `user`.                                                   |
+| 2            | echoed `post`                                 | A `post` the `user` chose to `echo`.                                                     |
+| 3            | echoed `post` with `reply`                    | A `post` the `user` chose to `echo` with a `reply`                                       |
+| 4            | echoed `post` with root `echo` and no `reply` | A `post` the `user` chose to `echo` which already `echoes` another `post`                |
+| 5            | echoed `post` with root `echo` and `reply`    | A `post` the `user` chose to `echo` with a `reply` which already `echoes` another `post` |
 
 ## User:
 
@@ -136,15 +137,15 @@ A post can have multiple mediums.
 
 The following table explains which field inside the medium type will be null:
 
-| Medium Type ID | Medium Type | Title  | Excerpt | Image Src | Link Src | Sensitive |
-| :------------: | ----------- | :----: | :-----: | :-------: | :------: | :-------: |
-|       1        | `article`   |        |         |           |          |           |
-|       2        | `audio`     |        |         |  `null`   |          |           |
-|       3        | `iframe`    |        |         |  `null`   |          |           |
-|       4        | `image`     | `null` | `null`  |           |  `null`  |           |
-|       5        | `link`      | `null` | `null`  |           |          |           |
-|       6        | `video`     |        |         |  `null`   |          |           |
-|       7        | `website`   |        |         |           |          |           |
+| Medium Type ID | Medium Type | Title  | Excerpt | Image Src | Link Src |
+| :------------: | ----------- | :----: | :-----: | :-------: | :------: |
+|       1        | `article`   |        |         |           |          |
+|       2        | `audio`     |        |         |  `null`   |          |
+|       3        | `iframe`    |        |         |  `null`   |          |
+|       4        | `image`     | `null` | `null`  |           |  `null`  |
+|       5        | `link`      | `null` | `null`  |           |          |
+|       6        | `video`     |        |         |  `null`   |          |
+|       7        | `website`   |        |         |           |          |
 
 Example media parsed from a post with multiple mediums:
 

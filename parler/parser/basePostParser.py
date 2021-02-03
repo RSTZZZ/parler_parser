@@ -15,7 +15,6 @@ class BasePostParser:
 
     def __init__(self, post):
         self.post = post
-        self.text = ""
 
     def parse(self):
         return BasePost(
@@ -32,7 +31,9 @@ class BasePostParser:
         return htmlParser.get_text(self.post, 'span', {'class': 'post--timestamp'})
 
     def get_text(self):
-        return htmlParser.get_paragraph(self.post, 'div',  {'class': 'card--body'})
+        self.text = htmlParser.get_paragraph(
+            self.post, 'div',  {'class': 'card--body'})
+        return self.text
 
     def get_user(self):
         return BasePostUserParser(self.post).parse()

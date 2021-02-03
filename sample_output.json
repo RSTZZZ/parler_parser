@@ -134,7 +134,7 @@
     "echoed_post": {
       "created_at": "4 days ago",
       "id": "",
-      "text": "Why are they stopping the vote count in Democrat Chatham county, Georgia?This sounds familiar! 🤨",
+      "text": "Why are they stopping the vote count in Democrat Chatham county, Georgia? This sounds familiar! 🤨",
       "user": {
         "user_id": "4486b4b2b23933b5dcc3b042121942af",
         "photo": "https://images.parler.com/31447b553b65465381b4e68c71d352f4_256",
@@ -151,6 +151,63 @@
       "comment_count": null,
       "echo_count": null,
       "upvote_count": null
+    },
+    "root_echoed_post": null
+  },
+  {
+    "created_at": "4 days ago",
+    "id": "",
+    "text": null,
+    "user": {
+      "user_id": "2dbc96ae036a68d6fd9e0bfcb4f53f9e",
+      "photo": "https://images.parler.com/b5b06f2b9c294e9db8a8c42407817b2c_256",
+      "badge": null,
+      "name": "J Self",
+      "username": "@Jself87",
+      "description": null,
+      "description_hashtags": null
+    },
+    "view_count": null,
+    "hashtags": [],
+    "mentions": [],
+    "media": [],
+    "comment_count": null,
+    "echo_count": null,
+    "upvote_count": null,
+    "post_type_id": 2,
+    "post_type": "echoed post",
+    "echoed_post": {
+      "created_at": "4 days ago",
+      "id": "",
+      "text": "WOW. My  @Name Hidden  car parade must have 10,000 + in Vegas today. Miles of cars!!! Miles. Will dominate Vegas Strip for hours! We’re ready to fight! Let the battle begin. I’m leading in Maserati with American flag flying and my beautiful fiancé Cindy driving. #MAGA",
+      "user": {
+        "user_id": "0bf93064c0aea384c7e189dbc1b0c270",
+        "photo": "https://images.parler.com/b5b06f2b9c294e9db8a8c42407817b2c_256",
+        "badge": "Influencer",
+        "name": "Wayne Root",
+        "username": "@realwayneroot",
+        "description": null,
+        "description_hashtags": null
+      },
+      "view_count": "45872",
+      "hashtags": [
+        {
+          "hashtag_id": "99245514d9f1985f784dd742394b928f",
+          "indices": [263, 268],
+          "text": "MAGA"
+        }
+      ],
+      "mentions": [
+        {
+          "user_id": "94d0248d4ea1b76e4d148c3bfe145018",
+          "indices": [9, 14],
+          "username": "@Name"
+        }
+      ],
+      "media": [],
+      "comment_count": "90",
+      "echo_count": "467",
+      "upvote_count": "1205"
     },
     "root_echoed_post": null
   },
@@ -269,7 +326,7 @@
     "echoed_post": {
       "created_at": "4 days ago",
       "id": "",
-      "text": "BLOCKBUSTER‼️The 'MOAB' — Mother Of All Bombshells — Breaks Open Entire 2020 National Election Fraud SchemeProof of a calculating and intentional plot to take down America by stealing the election. This proof provides the mechanism for each state to recall their slate of electors immediately or face lawsuits and request all federal government agencies to lock down all internal communications, equipment, and documentation from the U.S. Embassy in Rome, Italy. “Make no mistake, this is a coup d’etat that we will stop in the name of justice and free and fair elections,” stated Maria Strollo Zack, Chairman of Nations in Action.- - -SHINE THE LIGHT OF TRUTH, THE BEST DISINFECTANT ... EXPOSE INSIDIOUS EVIL‼️WAKE UP AMERICA‼️ TRANSPARENCY ... ACCOUNTABILITY‼️@realdonaldtrump@stopthesteal @rudyg@jennaellisesq@sidneypowell@linwood @genflynn @krakenwood",
+      "text": "BLOCKBUSTER‼️ The 'MOAB' — Mother Of All Bombshells — Breaks Open Entire 2020 National Election Fraud Scheme Proof of a calculating and intentional plot to take down America by stealing the election. This proof provides the mechanism for each state to recall their slate of electors immediately or face lawsuits and request all federal government agencies to lock down all internal communications, equipment, and documentation from the U.S. Embassy in Rome, Italy. “Make no mistake, this is a coup d’etat that we will stop in the name of justice and free and fair elections,” stated Maria Strollo Zack, Chairman of Nations in Action. - - - SHINE THE LIGHT OF TRUTH, THE BEST DISINFECTANT ... EXPOSE INSIDIOUS EVIL‼️ WAKE UP AMERICA‼️  TRANSPARENCY ... ACCOUNTABILITY‼️ @realdonaldtrump @stopthesteal  @rudyg @jennaellisesq @sidneypowell @linwood   @genflynn  @krakenwood",
       "user": {
         "user_id": "5b25d17347ad6e4621429ca5bc82923c",
         "photo": "https://images.parler.com/c2ab6291c29b4afe1c40d61384ff2442_256",
@@ -281,7 +338,48 @@
       },
       "view_count": "11037",
       "hashtags": [],
-      "mentions": [],
+      "mentions": [
+        {
+          "user_id": "a5450f6fb1f28959370ff8a1ab55e333",
+          "indices": [769, 785],
+          "username": "@realdonaldtrump"
+        },
+        {
+          "user_id": "4f94f78f2257122ca7627d4986d1df97",
+          "indices": [786, 799],
+          "username": "@stopthesteal"
+        },
+        {
+          "user_id": "ab6f79ee82df5b2f4bd39588002337c9",
+          "indices": [801, 807],
+          "username": "@rudyg"
+        },
+        {
+          "user_id": "027983b4867c5736a7831c23879a7171",
+          "indices": [808, 822],
+          "username": "@jennaellisesq"
+        },
+        {
+          "user_id": "2f6891877028c3acb417e36e5a79efe5",
+          "indices": [823, 836],
+          "username": "@sidneypowell"
+        },
+        {
+          "user_id": "008729b958418d0ba8b72f95e5fd57e7",
+          "indices": [837, 845],
+          "username": "@linwood"
+        },
+        {
+          "user_id": "90a124de5e7d9840f037d82ed3c86f24",
+          "indices": [848, 857],
+          "username": "@genflynn"
+        },
+        {
+          "user_id": "b59e7bbfbb1a06f90f662bdfe3d99c54",
+          "indices": [859, 870],
+          "username": "@krakenwood"
+        }
+      ],
       "media": [
         {
           "medium_type_id": 1,
@@ -518,7 +616,7 @@
     "echoed_post": {
       "created_at": "4 days ago",
       "id": "",
-      "text": "EXPLOSIVE: OBAMA AND RENZI FORMER PM OF ITALY ORCHSTRATED THE THEFT OF U.S. ELECTIONSHT @blueskyreport",
+      "text": "EXPLOSIVE: OBAMA AND RENZI FORMER PM OF ITALY ORCHSTRATED THE THEFT OF U.S. ELECTIONS HT @blueskyreport",
       "user": {
         "user_id": "5c38daf32d70711ce67f29cc6f13bff1",
         "photo": "https://images.parler.com/a821df947bfc4b6c89a451c24cae246a_256",
@@ -530,7 +628,13 @@
       },
       "view_count": "307881",
       "hashtags": [],
-      "mentions": [],
+      "mentions": [
+        {
+          "user_id": "a95effcf7e506094a79a585bbd595335",
+          "indices": [89, 103],
+          "username": "@blueskyreport"
+        }
+      ],
       "media": [
         {
           "medium_type_id": 7,

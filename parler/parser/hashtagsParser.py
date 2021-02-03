@@ -10,7 +10,7 @@ class HashtagsParser:
     '''
 
     def __init__(self, text):
-        self.text = text
+        self.text = text if text is not None else ""
 
     def parse(self):
         '''

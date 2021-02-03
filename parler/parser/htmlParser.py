@@ -68,7 +68,7 @@ def get_paragraph(html_element, html_tag, html_attribute):
     '''
     Get the appropriate paragraph text specified by the html_tag and html_attribute in the provided HTML element.
     '''
-    return html_element.find(html_tag, html_attribute).find('p').text
+    return html_element.find(html_tag, html_attribute).find('p').get_text(" ")
 
 
 @try_except
@@ -78,9 +78,9 @@ def get_text(html_element, html_tag, html_attribute, index=-1):
     Provide index if more than one matches the critera from html_tag and html_attribute.
     '''
     if (index > 0):
-        return html_element.find_all(html_tag, html_attribute)[index].text
+        return html_element.find_all(html_tag, html_attribute)[index].get_text(" ")
     else:
-        return html_element.find(html_tag, html_attribute).text
+        return html_element.find(html_tag, html_attribute).get_text(" ")
 
 
 @try_except
