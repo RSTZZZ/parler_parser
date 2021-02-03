@@ -31,25 +31,29 @@ You should get the same results as shown in [sample_output](./sample_output.json
 
 ## Parsing Logic
 
-1. Determine what type of post we are dealing with:
+1.  Determine what type of post we are dealing with:
 
-   - Original Post
-   - Echoed Post with No Reply
-   - Echoed Post with Reply
+    - New Post
+    - Echoed Post
+    - Echoed Post with Reply
+    - Echoed Post with Root Echo and No Reply
+    - Echoed Post with Root Echo and Reply
 
-2. If original post:
+2.  If `new post`, parse the only post as `main post` else parse the `reply` post as `main post`.
 
-   - Parse post info.
-   - Set `echoed_status` to be null.
+3.  If not `new post`, parse the `echoed post`.
 
-3. If echoed post with reply, we have to:
+4.  If `echoed post` or `echoed post with root echo and no reply`:
 
-   - Parse the reply post as the "main" post.
-   - Set `echoed_status` to be the information parsed from the echoed post.
+    - Use the "Echoed by ... " line to fill out `main` post info with the `user` and `created_at`
+    - Grab `username` from the meta information stored in the header.
+    - No profile badge can be found in the post this way.
+    - The `comment_count`, `echo_count`, `upvote_count` belongs to the echoed post.
 
-4. If echoed post with no reply:
-   - Use the "Echoed by ... " line to get the "main" post information.
-   - Grab `username` from the meta information stored in the header.
-   - No profile badge can be found in the post this way.
-   - Set `echoed_status` to be the information parsed from the echoed post.
-   - The `comment_count`, `echo_count`, `upvote_count` belongs to the echoed post.
+5.  Else:
+
+    - The `comment_count`, `echo_count`, `upvote_count` belongs to the `main` post.
+
+6.  If `Echoed Post with Root Echo and No Reply` or `Echoed Post with Root Echo and Reply`:
+
+    - Parse the `first` post for the `root echo`.
