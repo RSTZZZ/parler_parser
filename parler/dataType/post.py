@@ -58,10 +58,12 @@ class Post(BasePost):
                  echoed_post: BasePost = None,
                  root_echoed_post: BasePost = None):
 
-        super().__init__(main_post.created_at,
+        super().__init__(main_post.estimated_created_at,
+                         main_post.timestamp,
                          main_post.text,
                          main_post.user,
                          main_post.view_count,
+                         main_post.parler_post_id,
                          main_post.hashtags,
                          main_post.mentions,
                          main_post.media,

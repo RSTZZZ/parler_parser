@@ -6,23 +6,25 @@ The following are the different entities that are parsed from the parler posts a
 
 A post object contains the following fields:
 
-| Field              | Type                  | Nullable | Description                                                                                                                            |
-| ------------------ | --------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `created_at`       | `str`                 | `false`  | Time stamp of post in the HTML                                                                                                         |
-| `id`               | `str`                 | `false`  | md5Hash of something... still deciding                                                                                                 |
-| `text`             | `str`                 | `true`   | The actual UTF-8 text of the post                                                                                                      |
-| `user`             | [`User`](#user)       | `false`  | The user who made the post.                                                                                                            |
-| `view_count`       | `int`                 | `true`   | # of impressions / viewers who saw the post. For posts that are simply echoed, no impressions are given                                |
-| `hashtags`         | [`Hashtag`](#hashtag) | `true`   | Hashtags extracted from `text`                                                                                                         |
-| `mentions`         | [`Mention`](#mention) | `true`   | Mentions extracted from `text`                                                                                                         |
-| `media`            | [`Media`](#media)     | `true`   | Any linked media for this post.                                                                                                        |
-| `comment_count`    | `int`                 | `true`   | # of comments made to this post                                                                                                        |
-| `echo_count`       | `int`                 | `true`   | # of echoes made to this post                                                                                                          |
-| `upvote_count`     | `int`                 | `true`   | # of upvotes made to this post                                                                                                         |
-| `post_type_id`     | `int`                 | `false`  | ID in [1- 5]. See table below for details.                                                                                             |
-| `post_type`        | `int`                 | `false`  | Full name of the post type. See table below for details.                                                                               |
-| `echoed_post`      | [`post`](#post)       | `true`   | The echoed `post`. Includes all the same fields except `post_type_id`, `post_type`, `echoed_post`, and `root_echoed_post`.             |
-| `root_echoed_post` | [`post`](#post)       | `true`   | The root of the echoed `post`. Includes all the same fields except `post_type_id`, `post_type`, `echoed_post`, and `root_echoed_post`. |
+| Field                  | Type                  | Nullable | Description                                                                                                                            |
+| ---------------------- | --------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                   | `str`                 | `false`  | md5Hash of something... still deciding                                                                                                 |
+| `parler_post_id`       | `str`                 | `true`   | Parler's post id                                                                                                                       |
+| `estimated_created_at` | `str`                 | `false`  | UTC date time of when the post was created at in the format of `YYYY-MM-DD HH:MM:SS`                                                   |
+| `timestamp`            | `str`                 | `false`  | Time stamp of post in the HTML                                                                                                         |
+| `text`                 | `str`                 | `true`   | The actual UTF-8 text of the post                                                                                                      |
+| `user`                 | [`User`](#user)       | `false`  | The user who made the post.                                                                                                            |
+| `view_count`           | `int`                 | `true`   | # of impressions / viewers who saw the post. For posts that are simply echoed, no impressions are given                                |
+| `hashtags`             | [`Hashtag`](#hashtag) | `true`   | Hashtags extracted from `text`                                                                                                         |
+| `mentions`             | [`Mention`](#mention) | `true`   | Mentions extracted from `text`                                                                                                         |
+| `media`                | [`Media`](#media)     | `true`   | Any linked media for this post.                                                                                                        |
+| `comment_count`        | `int`                 | `true`   | # of comments made to this post                                                                                                        |
+| `echo_count`           | `int`                 | `true`   | # of echoes made to this post                                                                                                          |
+| `upvote_count`         | `int`                 | `true`   | # of upvotes made to this post                                                                                                         |
+| `post_type_id`         | `int`                 | `false`  | ID in [1- 5]. See table below for details.                                                                                             |
+| `post_type`            | `int`                 | `false`  | Full name of the post type. See table below for details.                                                                               |
+| `echoed_post`          | [`post`](#post)       | `true`   | The echoed `post`. Includes all the same fields except `post_type_id`, `post_type`, `echoed_post`, and `root_echoed_post`.             |
+| `root_echoed_post`     | [`post`](#post)       | `true`   | The root of the echoed `post`. Includes all the same fields except `post_type_id`, `post_type`, `echoed_post`, and `root_echoed_post`. |
 
 For examples, see [sample_output](./sample_output.json)
 

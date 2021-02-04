@@ -1,4 +1,8 @@
 import os
+import platform
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
 
 from parler.dataType.basePost import BasePost
 from parler.dataType.post import Post
@@ -22,6 +26,26 @@ class PostParser():
         if (os.path.exists(file_path)):
             with open(file_path, 'r', encoding="utf-8") as html_doc:
                 self.post_page = htmlParser.get_html_doc(html_doc)
+                self.file_creation_date = self.get_file_creation_date(
+                    file_path)
+                self.file_name = os.path.basename(file_path)
+
+    def get_file_creation_date(self, file_path):
+        """
+        Try to get the date that a file was created, falling back to when it was
+        last modified if that isn't possible.
+        See http://stackoverflow.com/a/39501288/1709587 for explanation.
+        """
+        if platform.system() == 'Windows':
+            file_creation_timestamp = os.path.getctime(file_path)
+        else:
+            stat = os.stat(file_path)
+            try:
+                file_creation_timestamp = stat.st_birthtime
+            except AttributeError:
+                file_creation_timestamp = stat.st_mtime
+
+        return datetime.fromtimestamp(file_creation_timestamp)
 
     def parse(self) -> Post:
 
@@ -44,7 +68,9 @@ class PostParser():
             #   1. Our main post will not get a proper user.
             #   2. Our main post will not have a proper created_at time.
             post.user = self.get_user_from_echo_no_reply()
-            post.created_at = self.get_created_at_from_echo_no_reply()
+            post.timestamp = self.get_created_at_from_echo_no_reply()
+            post.estimated_created_at = self.get_estimated_created_at(
+                post.timestamp)
 
             # The comment, echo and upvote found belongs to the echoed post
             post.echoed_post.comment_count = self.get_comment_count()
@@ -99,15 +125,15 @@ class PostParser():
 
     def get_main_post_info(self) -> BasePost:
         if (self.post_type_id == Post.ORIGINAL):
-            return BasePostParser(self.new_post).parse()
+            return BasePostParser(self.new_post, self.file_creation_date, parler_post_id=self.file_name).parse()
         else:
-            return BasePostParser(self.echo_reply_post).parse()
+            return BasePostParser(self.echo_reply_post, self.file_creation_date, parler_post_id=self.file_name).parse()
 
     def get_echoed_post_info(self) -> BasePost:
-        return BasePostParser(self.echoed_post).parse()
+        return BasePostParser(self.echoed_post, self.file_creation_date).parse()
 
     def get_root_echoed_post_info(self) -> BasePost:
-        return BasePostParser(self.root_echoed_post).parse()
+        return BasePostParser(self.root_echoed_post, self.file_creation_date).parse()
 
     def get_user_from_echo_no_reply(self) -> User:
         return EchoNoReplyUserParser(self.post_page).parse()
@@ -125,3 +151,18 @@ class PostParser():
 
     def get_upvote_count(self):
         return htmlParser.get_text(self.post_page, 'span', {'class': 'pa--item--count'}, index=2)
+
+    def get_estimated_created_at(self, timestamp):
+        time_interval = int(timestamp.split()[0])
+
+        if ("min" in timestamp):
+            return self.file_creation_date - relativedelta(minutes=time_interval)
+
+        if ("day" in timestamp):
+            return self.file_creation_date - relativedelta(days=time_interval)
+
+        if ("week" in timestamp):
+            return self.file_creation_date - relativedelta(weeks=time_interval)
+
+        if ("year" in timestamp):
+            return self.file_creation_date - relativedelta(years=time_interval)

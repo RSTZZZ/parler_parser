@@ -1,7 +1,9 @@
 [
   {
-    "created_at": "4 days ago",
     "id": "",
+    "parler_post_id": "article_example_ce6507b865974629bd9d76363398a884",
+    "estimated_created_at": "2021-01-07 01:01:46",
+    "timestamp": "4 days ago",
     "text": null,
     "user": {
       "user_id": "0aa3b9f9d557b78ff671b4604f88378b",
@@ -22,8 +24,10 @@
     "post_type_id": 2,
     "post_type": "echoed post",
     "echoed_post": {
-      "created_at": "4 days ago",
       "id": "",
+      "parler_post_id": null,
+      "estimated_created_at": "2021-01-07 01:01:46",
+      "timestamp": "4 days ago",
       "text": "Now We The People know what happened to Seth Rich.",
       "user": {
         "user_id": "008729b958418d0ba8b72f95e5fd57e7",
@@ -55,8 +59,10 @@
     "root_echoed_post": null
   },
   {
-    "created_at": "4 days ago",
     "id": "",
+    "parler_post_id": "audio_example_00f09a4b73fe499ea612e1c90e3c570c",
+    "estimated_created_at": "2021-01-06 22:40:16",
+    "timestamp": "4 days ago",
     "text": "Nothing can or will happen we are now communist controlled",
     "user": {
       "user_id": "0b691ff8e87387517644706ea2decda3",
@@ -77,8 +83,10 @@
     "post_type_id": 3,
     "post_type": "echoed post with reply",
     "echoed_post": {
-      "created_at": "4 days ago",
       "id": "",
+      "parler_post_id": null,
+      "estimated_created_at": "2021-01-06 22:40:16",
+      "timestamp": "4 days ago",
       "text": "A preview of what to expect as Republicans object to electoral votes today. A review of my Breitbart News coverage:",
       "user": {
         "user_id": "41085ff25f589b517aebd5e5266f2a16",
@@ -110,8 +118,10 @@
     "root_echoed_post": null
   },
   {
-    "created_at": "4 days ago",
     "id": "",
+    "parler_post_id": "example_with_reply_example_ce6777a798c64fc7a037db01eb8e81c9",
+    "estimated_created_at": "2021-01-07 05:09:42",
+    "timestamp": "4 days ago",
     "text": "Who authorizes these stoppages??? Whoever it is is part of the steal....",
     "user": {
       "user_id": "b153129f372ab4b5f339d09128b7f4f2",
@@ -132,8 +142,10 @@
     "post_type_id": 3,
     "post_type": "echoed post with reply",
     "echoed_post": {
-      "created_at": "4 days ago",
       "id": "",
+      "parler_post_id": null,
+      "estimated_created_at": "2021-01-07 05:09:42",
+      "timestamp": "4 days ago",
       "text": "Why are they stopping the vote count in Democrat Chatham county, Georgia? This sounds familiar! 🤨",
       "user": {
         "user_id": "4486b4b2b23933b5dcc3b042121942af",
@@ -155,8 +167,10 @@
     "root_echoed_post": null
   },
   {
-    "created_at": "4 days ago",
     "id": "",
+    "parler_post_id": "hashtag_example_00002078c92a405992fb07e77f3dbdc4",
+    "estimated_created_at": "2021-01-30 00:22:37",
+    "timestamp": "4 days ago",
     "text": null,
     "user": {
       "user_id": "2dbc96ae036a68d6fd9e0bfcb4f53f9e",
@@ -177,8 +191,10 @@
     "post_type_id": 2,
     "post_type": "echoed post",
     "echoed_post": {
-      "created_at": "4 days ago",
       "id": "",
+      "parler_post_id": null,
+      "estimated_created_at": "2021-01-30 00:22:37",
+      "timestamp": "4 days ago",
       "text": "WOW. My  @Name Hidden  car parade must have 10,000 + in Vegas today. Miles of cars!!! Miles. Will dominate Vegas Strip for hours! We’re ready to fight! Let the battle begin. I’m leading in Maserati with American flag flying and my beautiful fiancé Cindy driving. #MAGA",
       "user": {
         "user_id": "0bf93064c0aea384c7e189dbc1b0c270",
@@ -212,8 +228,10 @@
     "root_echoed_post": null
   },
   {
-    "created_at": "5 days ago",
     "id": "",
+    "parler_post_id": "iframe_example_00024d1c64d14f8baacf144ef0777022",
+    "estimated_created_at": "2021-01-28 16:03:17",
+    "timestamp": "5 days ago",
     "text": "",
     "user": {
       "user_id": "d6cfff97d5867f89a9e478606b11e4ff",
@@ -247,8 +265,10 @@
     "root_echoed_post": null
   },
   {
-    "created_at": "4 days ago",
     "id": "",
+    "parler_post_id": "image-echo_no_reply_example_3829c922d87c44c0af973fc2ffa4fb86",
+    "estimated_created_at": "2021-01-07 01:15:18",
+    "timestamp": "4 days ago",
     "text": null,
     "user": {
       "user_id": "b7f0a482553a2cc8102d34703f190f25",
@@ -269,8 +289,10 @@
     "post_type_id": 2,
     "post_type": "echoed post",
     "echoed_post": {
-      "created_at": "4 days ago",
       "id": "",
+      "parler_post_id": null,
+      "estimated_created_at": "2021-01-07 01:15:18",
+      "timestamp": "4 days ago",
       "text": "Washington D.C.",
       "user": {
         "user_id": "5ee4d12b1a6f3a1de22b2a9effca414f",
@@ -302,8 +324,10 @@
     "root_echoed_post": null
   },
   {
-    "created_at": "4 days ago",
     "id": "",
+    "parler_post_id": "multiple_media-mentions-root_echoed_post_with_reply_example_000038b8b8bb4f679ec5b2e65fb7428d",
+    "estimated_created_at": "2021-01-29 16:39:46",
+    "timestamp": "4 days ago",
     "text": "You will regret not listening to this recording",
     "user": {
       "user_id": "0c92515799e873c0c03daf19571d6f3e",
@@ -324,8 +348,10 @@
     "post_type_id": 5,
     "post_type": "echoed post with root echo and reply",
     "echoed_post": {
-      "created_at": "4 days ago",
       "id": "",
+      "parler_post_id": null,
+      "estimated_created_at": "2021-01-29 16:39:46",
+      "timestamp": "4 days ago",
       "text": "BLOCKBUSTER‼️ The 'MOAB' — Mother Of All Bombshells — Breaks Open Entire 2020 National Election Fraud Scheme Proof of a calculating and intentional plot to take down America by stealing the election. This proof provides the mechanism for each state to recall their slate of electors immediately or face lawsuits and request all federal government agencies to lock down all internal communications, equipment, and documentation from the U.S. Embassy in Rome, Italy. “Make no mistake, this is a coup d’etat that we will stop in the name of justice and free and fair elections,” stated Maria Strollo Zack, Chairman of Nations in Action. - - - SHINE THE LIGHT OF TRUTH, THE BEST DISINFECTANT ... EXPOSE INSIDIOUS EVIL‼️ WAKE UP AMERICA‼️  TRANSPARENCY ... ACCOUNTABILITY‼️ @realdonaldtrump @stopthesteal  @rudyg @jennaellisesq @sidneypowell @linwood   @genflynn  @krakenwood",
       "user": {
         "user_id": "5b25d17347ad6e4621429ca5bc82923c",
@@ -405,8 +431,10 @@
       "upvote_count": null
     },
     "root_echoed_post": {
-      "created_at": "1 week ago",
       "id": "",
+      "parler_post_id": null,
+      "estimated_created_at": "2021-01-26 16:39:46",
+      "timestamp": "1 week ago",
       "text": "So what is it that is so heinous, that the entire D.C. machine, both Democrats and Republicans fear so much, they are willing to band together to make go away, and prevent us from re-electing Trump ? The FBI, the InJustice Dept including the Attorney General and the Supreme Court, including the Chief Justice ? What is it ? The fact that they have been stealing elections for decades ? The foreign aid is a kick back scheme ? Or that they are all pedophiles, who have been participating in these unspeakable perverted acts ? A total sell out of America to foreign interests ? Or ALL of these things, and more. So not only do we have to stand up to the stolen Election, we DO NOT want to be ruled by these immoral, criminal, treasous bastards ! It's NOT about Trump ! He has, however exposed these bastards, EVERY ONE OF THEM ! Now what needs to happen ? We need to start getting involved with like minded folks, and be as organized as they are.",
       "user": {
         "user_id": "f24d2421da0c7b187b2718e7d2755ca1",
@@ -427,8 +455,10 @@
     }
   },
   {
-    "created_at": "4 days ago",
     "id": "",
+    "parler_post_id": "new_post_example_f523ab0c0bad4afe8b20e210cfa8638c",
+    "estimated_created_at": "2021-01-26 23:05:52",
+    "timestamp": "4 days ago",
     "text": "President DJT 11AM",
     "user": {
       "user_id": "c258dcf092a40f5466022ea949bdb107",
@@ -462,8 +492,10 @@
     "root_echoed_post": null
   },
   {
-    "created_at": "5 days ago",
     "id": "",
+    "parler_post_id": "root_echoed_post_without_reply_000035594243464c87ed8886ad06fead",
+    "estimated_created_at": "2021-01-28 23:28:26",
+    "timestamp": "5 days ago",
     "text": null,
     "user": {
       "user_id": "b4af396aaf4218d0860efd556254a93e",
@@ -484,8 +516,10 @@
     "post_type_id": 4,
     "post_type": "echoed post with root echo and no reply",
     "echoed_post": {
-      "created_at": "5 days ago",
       "id": "",
+      "parler_post_id": null,
+      "estimated_created_at": "2021-01-28 23:28:26",
+      "timestamp": "5 days ago",
       "text": "Make her famous!",
       "user": {
         "user_id": "f1bf7f50362ce0e814f069d7efc37494",
@@ -505,8 +539,10 @@
       "upvote_count": "1964"
     },
     "root_echoed_post": {
-      "created_at": "5 days ago",
       "id": "",
+      "parler_post_id": null,
+      "estimated_created_at": "2021-01-28 23:28:26",
+      "timestamp": "5 days ago",
       "text": "Please share this photo. This women assaulted a Trump supporter busting her eye open and ran away. She was wearing an “Admiral Security Services” jacket so it seems she works for them. The closest Admiral Security places in DC are either in Bethesda, MD or Baltimore, MD",
       "user": {
         "user_id": "215cfb3a5d98b9edd661fb65e08d66cb",
@@ -537,8 +573,10 @@
     }
   },
   {
-    "created_at": "4 days ago",
     "id": "",
+    "parler_post_id": "sensitive_media_example_0009a0ae3a16417293cd4eeb678d4d94",
+    "estimated_created_at": "2021-01-29 20:38:55",
+    "timestamp": "4 days ago",
     "text": null,
     "user": {
       "user_id": "a58f43b5694ac4f6407a28d82de8a119",
@@ -559,8 +597,10 @@
     "post_type_id": 2,
     "post_type": "echoed post",
     "echoed_post": {
-      "created_at": "4 days ago",
       "id": "",
+      "parler_post_id": null,
+      "estimated_created_at": "2021-01-29 20:38:55",
+      "timestamp": "4 days ago",
       "text": "",
       "user": {
         "user_id": "94b214d3c7c71feceeb63021e3268876",
@@ -592,8 +632,10 @@
     "root_echoed_post": null
   },
   {
-    "created_at": "4 days ago",
     "id": "",
+    "parler_post_id": "website_example_00000fc2fb034a6f8e2d2d7f947201f5",
+    "estimated_created_at": "2021-01-29 14:58:11",
+    "timestamp": "4 days ago",
     "text": "Scum of the earth.",
     "user": {
       "user_id": "f8926ce631684afdb95459bc5b11b77c",
@@ -614,8 +656,10 @@
     "post_type_id": 3,
     "post_type": "echoed post with reply",
     "echoed_post": {
-      "created_at": "4 days ago",
       "id": "",
+      "parler_post_id": null,
+      "estimated_created_at": "2021-01-29 14:58:11",
+      "timestamp": "4 days ago",
       "text": "EXPLOSIVE: OBAMA AND RENZI FORMER PM OF ITALY ORCHSTRATED THE THEFT OF U.S. ELECTIONS HT @blueskyreport",
       "user": {
         "user_id": "5c38daf32d70711ce67f29cc6f13bff1",
