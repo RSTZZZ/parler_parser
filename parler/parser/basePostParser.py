@@ -73,5 +73,8 @@ class BasePostParser:
         if ("week" in self.timestamp):
             return self.file_creation_date - relativedelta(weeks=time_interval)
 
+        if ("month" in self.timestamp):
+            return self.file_creation_date - relativedelta(months=time_interval)
+
         if ("year" in self.timestamp):
             return self.file_creation_date - relativedelta(years=time_interval)

@@ -108,6 +108,9 @@ class PostParser():
         )
 
     def set_post_type_id(self):
+        if self.new_post is None and self.echo_byline is None:
+            self.post_type_id = Post.UNKNOWN
+            return
 
         if self.echo_byline is None:
             self.post_type_id = Post.ORIGINAL
@@ -163,6 +166,9 @@ class PostParser():
 
         if ("week" in timestamp):
             return self.file_creation_date - relativedelta(weeks=time_interval)
+
+        if ("month" in self.timestamp):
+            return self.file_creation_date - relativedelta(months=time_interval)
 
         if ("year" in timestamp):
             return self.file_creation_date - relativedelta(years=time_interval)

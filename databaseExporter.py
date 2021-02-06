@@ -31,10 +31,15 @@ class DatabaseExporter:
         '''
         Insert user if it doesn't exist.
         '''
-        existing_user = self.userDB.find_one({'user_id': user['user_id']})
+        user_query = {'user_id': user['user_id']}
+        existing_user = self.userDB.find_one(user_query)
 
         if (existing_user is None):
             self.userDB.insert_one(user)
+        else:
+            if (existing_user["badge"] is None and user["badge"] is not None):
+                self.userDB.update_one(
+                    user_query, {"$set": {"badge": user["badge"]}})
 
     def insert_hashtags_relation(self, hashtags, user_id, username, post_id, post_estimated_created_at):
         '''
@@ -44,8 +49,8 @@ class DatabaseExporter:
 
             existing_hashtag_relation = self.hashtagDB.find_one(
                 {
-                    "post_object_id": post_id,
-                    "hashtag_id": hashtag['hashtag_id']
+                    "post_id": post_id,
+                    "hashtag_text": hashtag['text']
                 }
             )
 
@@ -61,7 +66,7 @@ class DatabaseExporter:
                     "post_estimated_created_at": post_estimated_created_at
                 }
 
-                self.hashtagDB.insert_one(hashtag)
+                self.hashtagDB.insert_one(hashtag_relation)
 
     def insert_mentions_relation(self, mentions, user_id, username, post_id, post_estimated_created_at):
         '''
@@ -72,7 +77,7 @@ class DatabaseExporter:
             existing_mention_relation = self.mentionDB.find_one(
                 {
                     "post_id": post_id,
-                    "mentioned_user_id": mention["user_id"]
+                    "mentioned_username": mention["username"]
                 }
             )
 
@@ -122,7 +127,7 @@ class DatabaseExporter:
 
         existing_retweet_relation = self.retweetDB.find_one(
             {
-                "retweet_post_id": retweeted_post_id,
+                "retweeted_post_id": retweeted_post_id,
                 "post_id": post_id
             }
         )
