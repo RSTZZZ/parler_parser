@@ -62,19 +62,19 @@ class BasePost:
 
     def convert(self):
         return Util.compress_dict({
-            "id": self.get_hash_id(),
+            "post_hash": self.get_hash_id(),
             "parler_post_id": self.parler_post_id,
             "estimated_created_at": self.estimated_created_at.strftime("%Y-%m-%d %H:%M:%S"),
             "timestamp": self.timestamp,
             "text": self.text,
             "user": Util.convert(self.user),
-            "view_count": self.view_count,
+            "view_count": Util.to_int(self.view_count),
             "hashtags": Util.convert(self.hashtags),
             "mentions": Util.convert(self.mentions),
             "media": Util.convert(self.media),
-            "comment_count": self.comment_count,
-            "echo_count": self.echo_count,
-            "upvote_count": self.upvote_count,
+            "comment_count": Util.to_int(self.comment_count),
+            "echo_count": Util.to_int(self.echo_count),
+            "upvote_count": Util.to_int(self.upvote_count),
         })
 
     def get_hash_id(self):

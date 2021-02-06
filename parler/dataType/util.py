@@ -18,6 +18,16 @@ class Util:
             return data.convert()
 
     @staticmethod
+    def to_int(data):
+        '''
+        Helper function to convert object to int. Return None if object is none.
+        '''
+        if (data is None):
+            return None
+        else:
+            return int(data)
+
+    @staticmethod
     def compress_dict(dictionary: Dict):
         for _, v in dictionary.items():
             if v is not None:
