@@ -23,9 +23,9 @@ class BasePost:
         "hashtags" : <hashtag object converted to dict>
         "mentions" : <media object converted to dict>
         "media" : <media object converted to dict>,
-        "comment_count" : 
-        "echo_count" : 
-        "upvote_count" :
+        "comment_count" : int
+        "echo_count" : int
+        "upvote_count" : int
     }
     '''
 
@@ -41,7 +41,7 @@ class BasePost:
                  media: Media = None,
                  comment_count: int = None,
                  echo_count: int = None,
-                 upvote_count: int = None
+                 upvote_count: int = None,
                  ):
         '''
         Initializer for the base post data type.
@@ -52,7 +52,6 @@ class BasePost:
         self.user = user
         self.view_count = view_count
 
-        self.id = ""
         self.parler_post_id = parler_post_id
         self.hashtags = hashtags
         self.mentions = mentions
@@ -63,7 +62,7 @@ class BasePost:
 
     def convert(self):
         return Util.compress_dict({
-            "id": self.id,
+            "id": self.get_hash_id(),
             "parler_post_id": self.parler_post_id,
             "estimated_created_at": self.estimated_created_at.strftime("%Y-%m-%d %H:%M:%S"),
             "timestamp": self.timestamp,
@@ -77,3 +76,13 @@ class BasePost:
             "echo_count": self.echo_count,
             "upvote_count": self.upvote_count,
         })
+
+    def get_hash_id(self):
+        # This function will be used to help compare different posts.
+        # We can identify a post by its text, user, hashtags, mentions, and media.
+        hash_id = Util.get_md5Hash(self.text or "")
+        hash_id += self.user.user_id
+        hash_id += self.hashtags.get_id()
+        hash_id += self.mentions.get_id()
+
+        return hash_id

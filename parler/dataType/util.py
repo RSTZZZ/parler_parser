@@ -38,7 +38,7 @@ class Util:
         return inner
 
     @staticmethod
-    def get_md5Hash(text):
+    def get_md5Hash(text) -> str:
         '''
         Generates the md5Hash in the format of hex digest given the text to hash.
         '''
