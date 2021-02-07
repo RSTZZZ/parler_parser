@@ -8,7 +8,7 @@ A post object contains the following fields:
 
 | Field                  | Type                  | Nullable | Description                                                                                                                            |
 | ---------------------- | --------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`                   | `str`                 | `false`  | md5Hash of something... still deciding                                                                                                 |
+| `post_hash`            | `str`                 | `false`  | md5Hash of text + md5hash of username + md5hash of first hashtag (if exist) + md5hash of first mention (if exist)                      |
 | `parler_post_id`       | `str`                 | `true`   | Parler's post id                                                                                                                       |
 | `estimated_created_at` | `str`                 | `false`  | UTC date time of when the post was created at in the format of `YYYY-MM-DD HH:MM:SS`                                                   |
 | `timestamp`            | `str`                 | `false`  | Time stamp of post in the HTML                                                                                                         |
