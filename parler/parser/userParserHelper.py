@@ -12,6 +12,7 @@ badge_map = {
     "05.svg": "Citizen Restricted Comments",
     "06.svg": "What is this",
     "07.svg": "Employee",
+    "08.svg": "Real Name",
     "09.svg": "Early Adopter"
 }
 

@@ -67,6 +67,9 @@ class BasePostParser:
         if ("min" in self.timestamp):
             return self.file_creation_date - relativedelta(minutes=time_interval)
 
+        if ("hour" in self.timestamp):
+            return self.file_creation_date - relativedelta(hours=time_interval)
+
         if ("day" in self.timestamp):
             return self.file_creation_date - relativedelta(days=time_interval)
 

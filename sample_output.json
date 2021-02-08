@@ -1,6 +1,6 @@
 [
   {
-    "id": "",
+    "post_hash": "d41d8cd98f00b204e9800998ecf8427e0aa3b9f9d557b78ff671b4604f88378bd41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
     "parler_post_id": "article_example_ce6507b865974629bd9d76363398a884",
     "estimated_created_at": "2021-01-07 01:01:46",
     "timestamp": "4 days ago",
@@ -24,7 +24,7 @@
     "post_type_id": 2,
     "post_type": "echoed post",
     "echoed_post": {
-      "id": "",
+      "post_hash": "6559160cdd23ec5df6f5541c5b2689e2008729b958418d0ba8b72f95e5fd57e7d41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
       "parler_post_id": null,
       "estimated_created_at": "2021-01-07 01:01:46",
       "timestamp": "4 days ago",
@@ -38,7 +38,7 @@
         "description": null,
         "description_hashtags": null
       },
-      "view_count": "3226951",
+      "view_count": 3226951,
       "hashtags": [],
       "mentions": [],
       "media": [
@@ -52,14 +52,14 @@
           "sensitive": false
         }
       ],
-      "comment_count": "1067",
-      "echo_count": "7329",
-      "upvote_count": "16871"
+      "comment_count": 1067,
+      "echo_count": 7329,
+      "upvote_count": 16871
     },
     "root_echoed_post": null
   },
   {
-    "id": "",
+    "post_hash": "f95f224ae02d395730a2b981c99fae8e0b691ff8e87387517644706ea2decda3d41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
     "parler_post_id": "audio_example_00f09a4b73fe499ea612e1c90e3c570c",
     "estimated_created_at": "2021-01-06 22:40:16",
     "timestamp": "4 days ago",
@@ -73,17 +73,17 @@
       "description": null,
       "description_hashtags": null
     },
-    "view_count": "12",
+    "view_count": 12,
     "hashtags": [],
     "mentions": [],
     "media": [],
-    "comment_count": "134",
-    "echo_count": "73",
-    "upvote_count": "426",
+    "comment_count": 134,
+    "echo_count": 73,
+    "upvote_count": 426,
     "post_type_id": 3,
     "post_type": "echoed post with reply",
     "echoed_post": {
-      "id": "",
+      "post_hash": "4d5e869c2be16f7556b709c2b78be36741085ff25f589b517aebd5e5266f2a16d41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
       "parler_post_id": null,
       "estimated_created_at": "2021-01-06 22:40:16",
       "timestamp": "4 days ago",
@@ -97,7 +97,7 @@
         "description": null,
         "description_hashtags": null
       },
-      "view_count": "312042",
+      "view_count": 312042,
       "hashtags": [],
       "mentions": [],
       "media": [
@@ -118,7 +118,7 @@
     "root_echoed_post": null
   },
   {
-    "id": "",
+    "post_hash": "bbd4dff1f7c133b2e0162140f8c1d5a2b153129f372ab4b5f339d09128b7f4f2d41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
     "parler_post_id": "example_with_reply_example_ce6777a798c64fc7a037db01eb8e81c9",
     "estimated_created_at": "2021-01-07 05:09:42",
     "timestamp": "4 days ago",
@@ -132,17 +132,17 @@
       "description": null,
       "description_hashtags": null
     },
-    "view_count": "315",
+    "view_count": 315,
     "hashtags": [],
     "mentions": [],
     "media": [],
-    "comment_count": "5589",
-    "echo_count": "7356",
-    "upvote_count": "26306",
+    "comment_count": 5589,
+    "echo_count": 7356,
+    "upvote_count": 26306,
     "post_type_id": 3,
     "post_type": "echoed post with reply",
     "echoed_post": {
-      "id": "",
+      "post_hash": "0aa6f0b83933010930dd05d16a9fec704486b4b2b23933b5dcc3b042121942afd41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
       "parler_post_id": null,
       "estimated_created_at": "2021-01-07 05:09:42",
       "timestamp": "4 days ago",
@@ -156,7 +156,7 @@
         "description": null,
         "description_hashtags": null
       },
-      "view_count": "1932209",
+      "view_count": 1932209,
       "hashtags": [],
       "mentions": [],
       "media": [],
@@ -167,7 +167,7 @@
     "root_echoed_post": null
   },
   {
-    "id": "",
+    "post_hash": "d41d8cd98f00b204e9800998ecf8427e2dbc96ae036a68d6fd9e0bfcb4f53f9ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
     "parler_post_id": "hashtag_example_00002078c92a405992fb07e77f3dbdc4",
     "estimated_created_at": "2021-01-30 00:22:37",
     "timestamp": "4 days ago",
@@ -191,7 +191,7 @@
     "post_type_id": 2,
     "post_type": "echoed post",
     "echoed_post": {
-      "id": "",
+      "post_hash": "079d29c50f306420b6c70b12b507858d0bf93064c0aea384c7e189dbc1b0c27099245514d9f1985f784dd742394b928f94d0248d4ea1b76e4d148c3bfe145018d41d8cd98f00b204e9800998ecf8427e",
       "parler_post_id": null,
       "estimated_created_at": "2021-01-30 00:22:37",
       "timestamp": "4 days ago",
@@ -205,7 +205,7 @@
         "description": null,
         "description_hashtags": null
       },
-      "view_count": "45872",
+      "view_count": 45872,
       "hashtags": [
         {
           "hashtag_id": "99245514d9f1985f784dd742394b928f",
@@ -221,14 +221,14 @@
         }
       ],
       "media": [],
-      "comment_count": "90",
-      "echo_count": "467",
-      "upvote_count": "1205"
+      "comment_count": 90,
+      "echo_count": 467,
+      "upvote_count": 1205
     },
     "root_echoed_post": null
   },
   {
-    "id": "",
+    "post_hash": "d41d8cd98f00b204e9800998ecf8427ed6cfff97d5867f89a9e478606b11e4ffd41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
     "parler_post_id": "iframe_example_00024d1c64d14f8baacf144ef0777022",
     "estimated_created_at": "2021-01-28 16:03:17",
     "timestamp": "5 days ago",
@@ -242,7 +242,7 @@
       "description": null,
       "description_hashtags": null
     },
-    "view_count": "20",
+    "view_count": 20,
     "hashtags": [],
     "mentions": [],
     "media": [
@@ -256,16 +256,16 @@
         "sensitive": false
       }
     ],
-    "comment_count": "0",
-    "echo_count": "0",
-    "upvote_count": "0",
+    "comment_count": 0,
+    "echo_count": 0,
+    "upvote_count": 0,
     "post_type_id": 1,
     "post_type": "new post",
     "echoed_post": null,
     "root_echoed_post": null
   },
   {
-    "id": "",
+    "post_hash": "d41d8cd98f00b204e9800998ecf8427eb7f0a482553a2cc8102d34703f190f25d41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
     "parler_post_id": "image-echo_no_reply_example_3829c922d87c44c0af973fc2ffa4fb86",
     "estimated_created_at": "2021-01-07 01:15:18",
     "timestamp": "4 days ago",
@@ -289,7 +289,7 @@
     "post_type_id": 2,
     "post_type": "echoed post",
     "echoed_post": {
-      "id": "",
+      "post_hash": "f92ca0b9177f41b3bd99f6f96dd292a45ee4d12b1a6f3a1de22b2a9effca414fd41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
       "parler_post_id": null,
       "estimated_created_at": "2021-01-07 01:15:18",
       "timestamp": "4 days ago",
@@ -303,7 +303,7 @@
         "description": null,
         "description_hashtags": null
       },
-      "view_count": "390679",
+      "view_count": 390679,
       "hashtags": [],
       "mentions": [],
       "media": [
@@ -317,14 +317,14 @@
           "sensitive": false
         }
       ],
-      "comment_count": "418",
-      "echo_count": "2130",
-      "upvote_count": "4815"
+      "comment_count": 418,
+      "echo_count": 2130,
+      "upvote_count": 4815
     },
     "root_echoed_post": null
   },
   {
-    "id": "",
+    "post_hash": "bcdd7bf4b82b7f5f64a12df8823ec3f20c92515799e873c0c03daf19571d6f3ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
     "parler_post_id": "multiple_media-mentions-root_echoed_post_with_reply_example_000038b8b8bb4f679ec5b2e65fb7428d",
     "estimated_created_at": "2021-01-29 16:39:46",
     "timestamp": "4 days ago",
@@ -338,17 +338,17 @@
       "description": null,
       "description_hashtags": null
     },
-    "view_count": "19",
+    "view_count": 19,
     "hashtags": [],
     "mentions": [],
     "media": [],
-    "comment_count": "15",
-    "echo_count": "63",
-    "upvote_count": "103",
+    "comment_count": 15,
+    "echo_count": 63,
+    "upvote_count": 103,
     "post_type_id": 5,
     "post_type": "echoed post with root echo and reply",
     "echoed_post": {
-      "id": "",
+      "post_hash": "418a018f85ab0233061d6fd9b22da3225b25d17347ad6e4621429ca5bc82923cd41d8cd98f00b204e9800998ecf8427ea5450f6fb1f28959370ff8a1ab55e333d41d8cd98f00b204e9800998ecf8427e",
       "parler_post_id": null,
       "estimated_created_at": "2021-01-29 16:39:46",
       "timestamp": "4 days ago",
@@ -362,7 +362,7 @@
         "description": null,
         "description_hashtags": null
       },
-      "view_count": "11037",
+      "view_count": 11037,
       "hashtags": [],
       "mentions": [
         {
@@ -431,7 +431,7 @@
       "upvote_count": null
     },
     "root_echoed_post": {
-      "id": "",
+      "post_hash": "6e50a2181cd70adf26552103d7afa91ef24d2421da0c7b187b2718e7d2755ca1d41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
       "parler_post_id": null,
       "estimated_created_at": "2021-01-26 16:39:46",
       "timestamp": "1 week ago",
@@ -445,7 +445,7 @@
         "description": null,
         "description_hashtags": null
       },
-      "view_count": "15246",
+      "view_count": 15246,
       "hashtags": [],
       "mentions": [],
       "media": [],
@@ -455,7 +455,7 @@
     }
   },
   {
-    "id": "",
+    "post_hash": "e3a861334dce830b8985c1709d76da91c258dcf092a40f5466022ea949bdb107d41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
     "parler_post_id": "new_post_example_f523ab0c0bad4afe8b20e210cfa8638c",
     "estimated_created_at": "2021-01-26 23:05:52",
     "timestamp": "4 days ago",
@@ -469,7 +469,7 @@
       "description": null,
       "description_hashtags": null
     },
-    "view_count": "17",
+    "view_count": 17,
     "hashtags": [],
     "mentions": [],
     "media": [
@@ -483,16 +483,16 @@
         "sensitive": false
       }
     ],
-    "comment_count": "0",
-    "echo_count": "1",
-    "upvote_count": "1",
+    "comment_count": 0,
+    "echo_count": 1,
+    "upvote_count": 1,
     "post_type_id": 1,
     "post_type": "new post",
     "echoed_post": null,
     "root_echoed_post": null
   },
   {
-    "id": "",
+    "post_hash": "d41d8cd98f00b204e9800998ecf8427eb4af396aaf4218d0860efd556254a93ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
     "parler_post_id": "root_echoed_post_without_reply_000035594243464c87ed8886ad06fead",
     "estimated_created_at": "2021-01-28 23:28:26",
     "timestamp": "5 days ago",
@@ -516,7 +516,7 @@
     "post_type_id": 4,
     "post_type": "echoed post with root echo and no reply",
     "echoed_post": {
-      "id": "",
+      "post_hash": "803baf522eb3925ab38940869a5da784f1bf7f50362ce0e814f069d7efc37494d41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
       "parler_post_id": null,
       "estimated_created_at": "2021-01-28 23:28:26",
       "timestamp": "5 days ago",
@@ -530,16 +530,16 @@
         "description": null,
         "description_hashtags": null
       },
-      "view_count": "4612",
+      "view_count": 4612,
       "hashtags": [],
       "mentions": [],
       "media": [],
-      "comment_count": "511",
-      "echo_count": "2838",
-      "upvote_count": "1964"
+      "comment_count": 511,
+      "echo_count": 2838,
+      "upvote_count": 1964
     },
     "root_echoed_post": {
-      "id": "",
+      "post_hash": "c24d8a49b0b75639b538b2a8251b8a16215cfb3a5d98b9edd661fb65e08d66cbd41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
       "parler_post_id": null,
       "estimated_created_at": "2021-01-28 23:28:26",
       "timestamp": "5 days ago",
@@ -553,7 +553,7 @@
         "description": null,
         "description_hashtags": null
       },
-      "view_count": "311964",
+      "view_count": 311964,
       "hashtags": [],
       "mentions": [],
       "media": [
@@ -573,7 +573,7 @@
     }
   },
   {
-    "id": "",
+    "post_hash": "d41d8cd98f00b204e9800998ecf8427ea58f43b5694ac4f6407a28d82de8a119d41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
     "parler_post_id": "sensitive_media_example_0009a0ae3a16417293cd4eeb678d4d94",
     "estimated_created_at": "2021-01-29 20:38:55",
     "timestamp": "4 days ago",
@@ -597,7 +597,7 @@
     "post_type_id": 2,
     "post_type": "echoed post",
     "echoed_post": {
-      "id": "",
+      "post_hash": "d41d8cd98f00b204e9800998ecf8427e94b214d3c7c71feceeb63021e3268876d41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
       "parler_post_id": null,
       "estimated_created_at": "2021-01-29 20:38:55",
       "timestamp": "4 days ago",
@@ -611,7 +611,7 @@
         "description": null,
         "description_hashtags": null
       },
-      "view_count": "78632",
+      "view_count": 78632,
       "hashtags": [],
       "mentions": [],
       "media": [
@@ -625,14 +625,14 @@
           "sensitive": true
         }
       ],
-      "comment_count": "121",
-      "echo_count": "1606",
-      "upvote_count": "1073"
+      "comment_count": 121,
+      "echo_count": 1606,
+      "upvote_count": 1073
     },
     "root_echoed_post": null
   },
   {
-    "id": "",
+    "post_hash": "0b6e43f2f9c924328541cbc9c6f55efdf8926ce631684afdb95459bc5b11b77cd41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427ed41d8cd98f00b204e9800998ecf8427e",
     "parler_post_id": "website_example_00000fc2fb034a6f8e2d2d7f947201f5",
     "estimated_created_at": "2021-01-29 14:58:11",
     "timestamp": "4 days ago",
@@ -646,17 +646,17 @@
       "description": null,
       "description_hashtags": null
     },
-    "view_count": "114",
+    "view_count": 114,
     "hashtags": [],
     "mentions": [],
     "media": [],
-    "comment_count": "532",
-    "echo_count": "2933",
-    "upvote_count": "3562",
+    "comment_count": 532,
+    "echo_count": 2933,
+    "upvote_count": 3562,
     "post_type_id": 3,
     "post_type": "echoed post with reply",
     "echoed_post": {
-      "id": "",
+      "post_hash": "981720cdf4a437535977f390953b5fe75c38daf32d70711ce67f29cc6f13bff1d41d8cd98f00b204e9800998ecf8427ea95effcf7e506094a79a585bbd595335d41d8cd98f00b204e9800998ecf8427e",
       "parler_post_id": null,
       "estimated_created_at": "2021-01-29 14:58:11",
       "timestamp": "4 days ago",
@@ -670,7 +670,7 @@
         "description": null,
         "description_hashtags": null
       },
-      "view_count": "307881",
+      "view_count": 307881,
       "hashtags": [],
       "mentions": [
         {

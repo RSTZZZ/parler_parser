@@ -1,5 +1,3 @@
-import os
-
 from parler.dataType.user import User
 
 import parler.parser.htmlParser as htmlParser
@@ -13,14 +11,10 @@ class ProfilePageUserParser:
     Represents the steps to parse a user from the profile page.
     '''
 
-    def __init__(self, file_path: str):
-        self.profile_page = None
+    def __init__(self, profile_page) -> None:
+        self.profile_page = profile_page
 
-        if (os.path.exists(file_path)):
-            with open(file_path, 'r', encoding="utf-8") as html_doc:
-                self.profile_page = htmlParser.get_html_doc(html_doc)
-
-    def parse(self):
+    def parse(self) -> User:
         return User(
             name=self.get_name(),
             username=self.get_username(),
@@ -58,4 +52,4 @@ class ProfilePageUserParser:
         '''
         description = htmlParser.get_text(
             self.profile_page, 'span', {'class': 'profile--bio'})
-        return HashtagsParser.parse(description)
+        return HashtagsParser(description).parse()
