@@ -27,7 +27,6 @@ class ProfilePageParser():
     def parse(self) -> Tuple[User, List[Post]]:
 
         # Check if valid page
-        print(self.profile_page is None)
         if (htmlParser.get_element_by_css(self.profile_page, "div#hero--wrapper") is None):
             return (None, None)
 

@@ -28,7 +28,13 @@ class ProfilePageUserParser:
         return htmlParser.get_text(self.profile_page, 'span', {'class': 'profile--name'})
 
     def get_username(self):
-        return htmlParser.get_text(self.profile_page, 'span', {'class': 'profile--username'})
+        username = htmlParser.get_text(self.profile_page, 'span', {
+                                       'class': 'profile--username'})
+
+        if (username is not None and not username.startswith("@")):
+            username = "@" + username
+
+        return username
 
     def get_photo(self):
         return htmlParser.get_image_src(self.profile_page, {'class': 'profile-photo-image'}, html_tag='div')
