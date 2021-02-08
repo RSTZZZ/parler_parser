@@ -14,9 +14,12 @@ class Mentions:
         self.mention_collection = []
 
     def get_id(self):
-        if (len(self.mention_collection) > 0):
-            return self.mention_collection[0].user_id
-        return ""
+        try:
+            if (len(self.mention_collection) > 0):
+                return self.mention_collection[0].user_id
+            return Util.get_md5Hash("")
+        except Exception:
+            return Util.get_md5Hash("")
 
     def add(self, mention: Mention):
         self.mention_collection.append(mention)

@@ -16,6 +16,14 @@ class Media:
     def add(self, medium: Medium):
         self.medium_collection.append(medium)
 
+    def get_id(self):
+        try:
+            if (len(self.medium_collection) > 0):
+                return Util.get_md5Hash(Util.convert(self.medium_collection[0]))
+            return Util.get_md5Hash("")
+        except Exception:
+            return Util.get_md5Hash("")
+
     def convert(self):
         result = []
         for medium in self.medium_collection:

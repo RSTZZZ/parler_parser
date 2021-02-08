@@ -35,11 +35,13 @@ class DatabaseExporter:
         existing_user = self.userDB.find_one(user_query)
 
         if (existing_user is None):
-            self.userDB.insert_one(user)
+            new_user = self.userDB.insert_one(user)
+            return new_user.inserted_id
         else:
             if (existing_user["badge"] is None and user["badge"] is not None):
                 self.userDB.update_one(
                     user_query, {"$set": {"badge": user["badge"]}})
+            return existing_user["_id"]
 
     def insert_hashtags_relation(self, hashtags, user_id, username, post_id, post_estimated_created_at):
         '''
@@ -100,7 +102,6 @@ class DatabaseExporter:
         '''
         existing_quote_relation = self.quoteDB.find_one(
             {
-                "quoted_post_id": quoted_post_id,
                 "post_id": post_id
             }
         )
@@ -127,7 +128,6 @@ class DatabaseExporter:
 
         existing_retweet_relation = self.retweetDB.find_one(
             {
-                "retweeted_post_id": retweeted_post_id,
                 "post_id": post_id
             }
         )
@@ -165,7 +165,15 @@ class DatabaseExporter:
         Insert post into the db and return its object id
         '''
 
-        post_query = {'post_hash': post['post_hash']}
+        post_query = {'parler_post_id': post['parler_post_id'],
+                      'text': post['text'],
+                      'user.username': post['user']['username'],
+                      'hashtags': post['hashtags'],
+                      'mentions': post['mentions'],
+                      'media': post['media'],
+                      'estimated_created_at': post['estimated_created_at'],
+                      }
+
         existing_post = self.postDB.find_one(post_query)
 
         # Return post if it already exists.
@@ -223,19 +231,19 @@ class DatabaseExporter:
         Inserts the root echoed post and the echoed post into the db.
         '''
 
-        # Update echoed_post
-        echoed_post["post_type_id"] = Post.ECHO_WITH_REPLY
-        echoed_post["post_type"] = "echoed post with reply"
-        echoed_post["echoed_post"] = root_echoed_post
-        echoed_post["root_echoed_post"] = None
-        echoed_post_id = self.insert_base_post_into_db(echoed_post)
-
         # Add fields for the root_echoed_post
         root_echoed_post["post_type_id"] = Post.ORIGINAL
         root_echoed_post["post_type"] = "new post"
         root_echoed_post["echoed_post"] = None
         root_echoed_post["root_echoed_post"] = None
         root_echoed_post_id = self.insert_base_post_into_db(root_echoed_post)
+
+        # Update echoed_post
+        echoed_post["post_type_id"] = Post.ECHO_WITH_REPLY
+        echoed_post["post_type"] = "echoed post with reply"
+        echoed_post["echoed_post"] = root_echoed_post_id
+        echoed_post["root_echoed_post"] = None
+        echoed_post_id = self.insert_base_post_into_db(echoed_post)
 
         return echoed_post_id, root_echoed_post_id
 
@@ -359,3 +367,6 @@ class DatabaseExporter:
 
         if (post_type == Post.ECHO_WITH_ROOT_AND_REPLY):
             self.insert_root_echoed_with_reply(post)
+
+    def close(self):
+        self.client.close()

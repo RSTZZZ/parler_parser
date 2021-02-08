@@ -14,9 +14,12 @@ class Hashtags:
         self.hashtag_collection = []
 
     def get_id(self):
-        if (len(self.hashtag_collection) > 0):
-            return self.hashtag_collection[0].hashtag_id
-        return ""
+        try:
+            if (len(self.hashtag_collection) > 0):
+                return self.hashtag_collection[0].hashtag_id
+            return Util.get_md5Hash("")
+        except Exception:
+            return Util.get_md5Hash("")
 
     def add(self, hashtag: Hashtag):
         self.hashtag_collection.append(hashtag)

@@ -84,5 +84,6 @@ class BasePost:
         hash_id += self.user.user_id
         hash_id += self.hashtags.get_id()
         hash_id += self.mentions.get_id()
+        hash_id += self.media.get_id()
 
         return hash_id
