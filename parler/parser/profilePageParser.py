@@ -3,15 +3,12 @@ from datetime import datetime
 from parler.parser.singlePostParser import SinglePostParser
 from typing import List, Tuple
 
-from parler.dataType.basePost import BasePost
 from parler.dataType.post import Post
 from parler.dataType.user import User
 
 import parler.parser.htmlParser as htmlParser
 
-from parler.parser.basePostParser import BasePostParser
 from parler.parser.profilePageUserParser import ProfilePageUserParser
-from parler.parser.echoNoReplyUserParser import EchoNoReplyUserParser
 
 
 class ProfilePageParser():
@@ -28,6 +25,11 @@ class ProfilePageParser():
                     str(timestamp), '%Y%m%d%H%M%S')
 
     def parse(self) -> Tuple[User, List[Post]]:
+
+        # Check if valid page
+        print(self.profile_page is None)
+        if (htmlParser.get_element_by_css(self.profile_page, "div#hero--wrapper") is None):
+            return (None, None)
 
         user = ProfilePageUserParser(self.profile_page).parse()
 

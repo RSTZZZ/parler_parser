@@ -38,9 +38,14 @@ class DatabaseExporter:
             new_user = self.userDB.insert_one(user)
             return new_user.inserted_id
         else:
-            if (existing_user["badge"] is None and user["badge"] is not None):
-                self.userDB.update_one(
-                    user_query, {"$set": {"badge": user["badge"]}})
+            # update user badge
+            # update user description
+            # update user description_hashtags
+            self.userDB.update_one(
+                user_query, {"$set": {"badge": existing_user["badge"] or user["badge"],
+                                      "description": existing_user["description"] or user["description"],
+                                      "description_hashtags": existing_user["description_hashtags"] or user["description_hashtags"]
+                                      }})
             return existing_user["_id"]
 
     def insert_hashtags_relation(self, hashtags, user_id, username, post_id, post_estimated_created_at):
