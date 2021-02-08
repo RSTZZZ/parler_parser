@@ -6,7 +6,7 @@ The parler parser is used to parse parler HTML posts and user profiles. Parler p
 
 Refer to [here](./parsedEntities.md)
 
-## Example Run:
+## Example Post Parser:
 
 ```python
 import glob
@@ -23,6 +23,26 @@ for file in files:
     data.append(post.convert())
 
 print(data)
+```
+
+## Example Profile Page Parser:
+
+```python
+from parler.parser.profilePageParser import ProfilePageParser
+
+file = r".\profile\00KimPossible00\posts\index.html"
+timestamp = 20201124075219
+
+profilePage = ProfilePageParser(file, timestamp)
+
+user, posts = profilePage.parse()
+
+print(user.convert())
+print()
+
+for post in posts:
+    print(post.convert())
+    print()
 ```
 
 ## Sample Output
